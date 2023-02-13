@@ -1,237 +1,149 @@
-<section id="section-one">
-    <div class="container-fluid g-0">
-        <div id="carouselExampleIndicators" class="carousel slide">
-            <div class="carousel-indicators">
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active"
-                    aria-current="true" aria-label="Slide 1"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-                    aria-label="Slide 2"></button>
-                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-                    aria-label="Slide 3"></button>
-            </div>
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="https://www.w3schools.com/howto/img_lights_wide.jpg" class="d-block w-100" alt="...">
+<div ng-controller="pageHome">
+    <section id="section-one">
+        <div class="container-fluid g-0">
+            <div id="carouselExampleIndicators" class="carousel slide">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
+                        class="active" aria-current="true" aria-label="Slide 1"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
+                        aria-label="Slide 2"></button>
+                    <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
+                        aria-label="Slide 3"></button>
                 </div>
-                <div class="carousel-item">
-                    <img src="https://www.w3schools.com/howto/img_mountains_wide.jpg" class="d-block w-100" alt="...">
+                <div class="carousel-inner">
+                    <div ng-class="{'carousel-item active': $first}" class="carousel-item" ng-repeat="data in sliders">
+                        <img ng-src="{{data.urlimage}}" class="d-block w-100" alt="{{data.alt}}">
+                    </div>
                 </div>
-                <div class="carousel-item">
-                    <img src="https://www.w3schools.com/howto/img_fjords_wide.jpg" class="d-block w-100" alt="...">
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
+        </div>
+        <div class="container g-0 boxcta bg-primary">
+            <div class="row">
+                <div class="col-9">
+                    <h2 class="text-light p-4">{{cta[0].title}}</h2>
+                </div>
+                <div class="col-3 d-flex align-items-center justify-content-center">
+                    <a href="{{cta[0].btnurl}}"><span class="btn-cta">{{cta[0].btntext}}</span></a>
                 </div>
             </div>
-            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
-                data-bs-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Previous</span>
-            </button>
-            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
-                data-bs-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="visually-hidden">Next</span>
-            </button>
         </div>
-    </div>
-    <div class="container g-0 boxcta bg-primary">
-        <div class="row">
-            <div class="col-9">
-                <h2 class="text-light p-4">The Nobel Prize: A Prestigious Recognition of Excellence.</h2>
+    </section>
+    <section id="section-two">
+        <div class="container g-0 my-3">
+            <div class="row py-3 my-4" ng-repeat="data in topNews"
+                ng-class="{'row py-3 my-4 flex-column-reverse': $last}">
+                <div ng-bind-html class="col-sm-1 col-md-6">{{data.mediaContent}}
+                </div>
+                <div class="col-sm-1 col-md-6 px-4 d-flex flex-column justify-content-between short-news">
+                    <h3 class="title-line-y py-3">{{data.title}}</h3>
+                    <p>{{data.shortContent}}</p>
+                    <button ng-href="{{data.urlContent}}" class="btn-rm w-25">Read more</button>
+                </div>
             </div>
-            <div class="col-3 d-flex align-items-center justify-content-center">
-                <a href="/about-us.html"><span class="btn-cta">Read more</span></a>
-            </div>
+            <!-- <div class="row py-3 my-4">
+                <div class="col-sm-1 col-md-6 px-4 d-flex flex-column justify-content-between short-news">
+                    <h3 class="title-line-y py-3">2022 Nobel Prizes: List of Winners</h3>
+                    <p>
+                        The 2022 Nobel Prize winners were announced, honoring individuals who have made exceptional
+                        contributions to their respective fields. The Nobel Prizes, which are awarded annually in six
+                        categories - Physics, Chemistry, Medicine, Literature, Peace, and Economics - recognize
+                        individuals who have advanced our understanding of the world and made a positive impact on
+                        society.
+                    </p>
+                    <button class="btn-rm w-25">Read more</button>
+                </div>
+                <div class="col-sm-1 col-md-6">
+                    <img src="./images/thumb/Nobel-Prize-2022.webp" alt="">
+                </div>
+            </div> -->
         </div>
-    </div>
-</section>
-<section id="section-two">
-    <div class="container g-0 my-3">
-        <div class="row py-3">
-            <div class="col-sm-1 col-md-6">
-                <iframe width="100%" height="350" src="https://www.youtube.com/embed/LutI8YqJkqM"
-                    title="Nobel Minds 2022" frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowfullscreen></iframe>
-            </div>
-            <div class="col-sm-1 col-md-6 px-4 d-flex flex-column justify-content-between short-news">
-                <h3 class="title-line-y py-3">2022 Nobel Prize laureates in discussion</h3>
-                <p>
-                    Join Nobel Prize laureates as they engage in a lively discussion about their award-winning
-                    discoveries and achievements, and explore the potential practical applications of their work.
-                    The thought-provoking conversation is moderated by Zeinab Badawi of the BBC in "Nobel Minds."
-                </p>
-                <button class="btn-rm w-25">Read more</button>
-            </div>
+    </section>
+    <section id="section-four" class="video-banner">
+        <div class="videobg">
+            <video playsinline autoplay muted loop>
+                <source src="./video-nen-background.mp4" mimetype="video/mp4">
+            </video>
         </div>
-    </div>
-</section>
-<section id="section-three">
-    <div class="container g-0 my-3">
-        <div class="row py-3">
-            <div class="col-sm-1 col-md-6 px-4 d-flex flex-column justify-content-between short-news">
-                <h3 class="title-line-y py-3">2022 Nobel Prizes: List of Winners</h3>
-                <p>
-                    The 2022 Nobel Prize winners were announced, honoring individuals who have made exceptional
-                    contributions to their respective fields. The Nobel Prizes, which are awarded annually in six
-                    categories - Physics, Chemistry, Medicine, Literature, Peace, and Economics - recognize
-                    individuals who have advanced our understanding of the world and made a positive impact on
-                    society.
-                </p>
-                <button class="btn-rm w-25">Read more</button>
-            </div>
-            <div class="col-sm-1 col-md-6">
-                <img src="./images/thumb/Nobel-Prize-2022.webp" alt="">
+        <div class="container banner-ov">
+            <div class="banner-ov-bg">
+                <h1>Advancing science for the benefit of humanity</h1>
             </div>
         </div>
-    </div>
-</section>
-<section id="section-four" class="video-banner">
-    <div class="videobg">
-        <video playsinline autoplay muted loop>
-            <source src="./video-nen-background.mp4" mimetype="video/mp4">
-        </video>
-    </div>
-    <div class="container banner-ov">
-        <div class="banner-ov-bg">
-            <h1>Advancing science for the benefit of humanity</h1>
-        </div>
-    </div>
-</section>
-<section id="section-five">
-    <div class="container g-0">
-        <div class="row my-5">
-            <div class="col-sm-1 col-md-6">
-                <div class="card-featured">
+    </section>
+    <section id="section-five">
+        <div class="container g-0">
+            <div class="row my-5">
+                <div class="col-sm-1 col-md-6">
+                    <div class="card-featured">
+                        <div class="card-thumb"><img src="./images/thumb/The City of the Future.jpg" alt="">
+                            <span class="card-datetime">9 December 2021</span>
+                        </div>
+                        <div class="card-content">
+                            <h5 class="card-title">The City of the Future</h5>
+                            <p>
+                                A mix of digital and physical speakers came together in Gothenburg and online to talk
+                                about how we can make cities better. </p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-sm-1 col-md-6 d-flex flex-column justify-content-between">
+                    <div class="card-featured-col2 d-flex flex-row">
+                        <div class="card-thumb col-4"><img src="./images/thumb/The City of the Future.jpg" alt="">
+                            <span class="card-datetime">9 December 2021</span>
+                        </div>
+                        <div class="card-content col-8 px-3 d-flex flex-column justify-content-between">
+                            <h5 class="card-title">The City of the Future</h5>
+                            <p>
+                                A mix of digital and physical speakers came together in Gothenburg and online to talk
+                                about how we can make cities better. </p>
+                        </div>
+                    </div>
+                    <div class="card-featured-col2 d-flex flex-row">
+                        <div class="card-thumb col-4"><img src="./images/thumb/The City of the Future.jpg" alt="">
+                            <span class="card-datetime">9 December 2021</span>
+                        </div>
+                        <div class="card-content col-8 px-3 d-flex flex-column justify-content-between">
+                            <h5 class="card-title">The City of the Future</h5>
+                            <p>
+                                A mix of digital and physical speakers came together in Gothenburg and online to talk
+                                about how we can make cities better. </p>
+                        </div>
+                    </div>
+                    <div class="card-featured-col2 d-flex flex-row">
+                        <div class="card-thumb col-4"><img src="./images/thumb/The City of the Future.jpg" alt="">
+                            <span class="card-datetime">9 December 2021</span>
+                        </div>
+                        <div class="card-content col-8 px-3 d-flex flex-column justify-content-between">
+                            <h5 class="card-title">The City of the Future</h5>
+                            <p>
+                                A mix of digital and physical speakers came together in Gothenburg and online to talk
+                                about how we can make cities better. </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row g-0 d-flex">
+                <div class="card-news mx-2 col">
                     <div class="card-thumb"><img src="./images/thumb/The City of the Future.jpg" alt="">
                         <span class="card-datetime">9 December 2021</span>
                     </div>
-                    <div class="card-content">
+                    <div class="card-content d-flex flex-column justify-content-between">
                         <h5 class="card-title">The City of the Future</h5>
                         <p>
                             A mix of digital and physical speakers came together in Gothenburg and online to talk
                             about how we can make cities better. </p>
                     </div>
                 </div>
-            </div>
-            <div class="col-sm-1 col-md-6 d-flex flex-column justify-content-between">
-                <div class="card-featured-col2 d-flex flex-row">
-                    <div class="card-thumb col-4"><img src="./images/thumb/The City of the Future.jpg" alt="">
-                        <span class="card-datetime">9 December 2021</span>
-                    </div>
-                    <div class="card-content col-8 px-3 d-flex flex-column justify-content-between">
-                        <h5 class="card-title">The City of the Future</h5>
-                        <p>
-                            A mix of digital and physical speakers came together in Gothenburg and online to talk
-                            about how we can make cities better. </p>
-                    </div>
-                </div>
-                <div class="card-featured-col2 d-flex flex-row">
-                    <div class="card-thumb col-4"><img src="./images/thumb/The City of the Future.jpg" alt="">
-                        <span class="card-datetime">9 December 2021</span>
-                    </div>
-                    <div class="card-content col-8 px-3 d-flex flex-column justify-content-between">
-                        <h5 class="card-title">The City of the Future</h5>
-                        <p>
-                            A mix of digital and physical speakers came together in Gothenburg and online to talk
-                            about how we can make cities better. </p>
-                    </div>
-                </div>
-                <div class="card-featured-col2 d-flex flex-row">
-                    <div class="card-thumb col-4"><img src="./images/thumb/The City of the Future.jpg" alt="">
-                        <span class="card-datetime">9 December 2021</span>
-                    </div>
-                    <div class="card-content col-8 px-3 d-flex flex-column justify-content-between">
-                        <h5 class="card-title">The City of the Future</h5>
-                        <p>
-                            A mix of digital and physical speakers came together in Gothenburg and online to talk
-                            about how we can make cities better. </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="row g-0 d-flex">
-            <div class="card-news mx-2 col">
-                <div class="card-thumb"><img src="./images/thumb/The City of the Future.jpg" alt="">
-                    <span class="card-datetime">9 December 2021</span>
-                </div>
-                <div class="card-content d-flex flex-column justify-content-between">
-                    <h5 class="card-title">The City of the Future</h5>
-                    <p>
-                        A mix of digital and physical speakers came together in Gothenburg and online to talk
-                        about how we can make cities better. </p>
-                </div>
-            </div>
-            <div class="card-news mx-2 col">
-                <div class="card-thumb"><img src="./images/thumb/The City of the Future.jpg" alt="">
-                    <span class="card-datetime">9 December 2021</span>
-                </div>
-                <div class="card-content d-flex flex-column justify-content-between">
-                    <h5 class="card-title">The City of the Future</h5>
-                    <p>
-                        A mix of digital and physical speakers came together in Gothenburg and online to talk
-                        about how we can make cities better. </p>
-                </div>
-            </div>
-            <div class="card-news mx-2 col">
-                <div class="card-thumb"><img src="./images/thumb/The City of the Future.jpg" alt="">
-                    <span class="card-datetime">9 December 2021</span>
-                </div>
-                <div class="card-content d-flex flex-column justify-content-between">
-                    <h5 class="card-title">The City of the Future</h5>
-                    <p>
-                        A mix of digital and physical speakers came together in Gothenburg and online to talk
-                        about how we can make cities better. </p>
-                </div>
-            </div>
-            <div class="card-news mx-2 col">
-                <div class="card-thumb"><img src="./images/thumb/The City of the Future.jpg" alt="">
-                    <span class="card-datetime">9 December 2021</span>
-                </div>
-                <div class="card-content d-flex flex-column justify-content-between">
-                    <h5 class="card-title">The City of the Future</h5>
-                    <p>
-                        A mix of digital and physical speakers came together in Gothenburg and online to talk
-                        about how we can make cities better. </p>
-                </div>
-            </div>
-            <div class="card-news mx-2 col">
-                <div class="card-thumb"><img src="./images/thumb/The City of the Future.jpg" alt="">
-                    <span class="card-datetime">9 December 2021</span>
-                </div>
-                <div class="card-content d-flex flex-column justify-content-between">
-                    <h5 class="card-title">The City of the Future</h5>
-                    <p>
-                        A mix of digital and physical speakers came together in Gothenburg and online to talk
-                        about how we can make cities better. </p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-<section id="section-six">
-    <div class="container g-0 py-5">
-        <div class="row p-5">
-            <h3>Explore prizes and laureates</h3>
-            <form class="m-3">
-                <div class="row d-flex justify-content-around">
-                    <div class="col-6">
-                        <select name="categories" id="form-categories" size="3">
-                            <option class="col-4" value="physics">Physics</option>
-                            <option class="col-4" value="chemistry">Chemistry</option>
-                            <option class="col-4" value="medicine">Medicine</option>
-                        </select>
-                    </div>
-                    <input type="number" name="year" id="year" class="col-2" placeholder="2022" min="1901" max="2022">
-                    <input type="submit" value="Submit" class="btn-search col-2">
-                </div>
-            </form>
-        </div>
-    </div>
-</section>
-<section id="section-seven">
-    <div class="container g-0">
-        <h3 class="py-3">You know about them?</h3>
-        <div class="row">
-            <div class="row d-flex">
                 <div class="card-news mx-2 col">
                     <div class="card-thumb"><img src="./images/thumb/The City of the Future.jpg" alt="">
                         <span class="card-datetime">9 December 2021</span>
@@ -278,4 +190,78 @@
                 </div>
             </div>
         </div>
-</section>
+    </section>
+    <section id="section-six">
+        <div class="container g-0 py-5">
+            <div class="row p-5">
+                <h3>Explore prizes and laureates</h3>
+                <form class="m-3">
+                    <div class="row d-flex justify-content-around">
+                        <div class="col-6">
+                            <select name="categories" id="form-categories" size="3">
+                                <option class="col-4" value="physics">Physics</option>
+                                <option class="col-4" value="chemistry">Chemistry</option>
+                                <option class="col-4" value="medicine">Medicine</option>
+                            </select>
+                        </div>
+                        <input type="number" name="year" id="year" class="col-2" placeholder="2022" min="1901"
+                            max="2022">
+                        <input type="submit" value="Submit" class="btn-search col-2">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+    <section id="section-seven">
+        <div class="container g-0">
+            <h3 class="py-3">You know about them?</h3>
+            <div class="row">
+                <div class="row d-flex">
+                    <div class="card-news mx-2 col">
+                        <div class="card-thumb"><img src="./images/thumb/The City of the Future.jpg" alt="">
+                            <span class="card-datetime">9 December 2021</span>
+                        </div>
+                        <div class="card-content d-flex flex-column justify-content-between">
+                            <h5 class="card-title">The City of the Future</h5>
+                            <p>
+                                A mix of digital and physical speakers came together in Gothenburg and online to talk
+                                about how we can make cities better. </p>
+                        </div>
+                    </div>
+                    <div class="card-news mx-2 col">
+                        <div class="card-thumb"><img src="./images/thumb/The City of the Future.jpg" alt="">
+                            <span class="card-datetime">9 December 2021</span>
+                        </div>
+                        <div class="card-content d-flex flex-column justify-content-between">
+                            <h5 class="card-title">The City of the Future</h5>
+                            <p>
+                                A mix of digital and physical speakers came together in Gothenburg and online to talk
+                                about how we can make cities better. </p>
+                        </div>
+                    </div>
+                    <div class="card-news mx-2 col">
+                        <div class="card-thumb"><img src="./images/thumb/The City of the Future.jpg" alt="">
+                            <span class="card-datetime">9 December 2021</span>
+                        </div>
+                        <div class="card-content d-flex flex-column justify-content-between">
+                            <h5 class="card-title">The City of the Future</h5>
+                            <p>
+                                A mix of digital and physical speakers came together in Gothenburg and online to talk
+                                about how we can make cities better. </p>
+                        </div>
+                    </div>
+                    <div class="card-news mx-2 col">
+                        <div class="card-thumb"><img src="./images/thumb/The City of the Future.jpg" alt="">
+                            <span class="card-datetime">9 December 2021</span>
+                        </div>
+                        <div class="card-content d-flex flex-column justify-content-between">
+                            <h5 class="card-title">The City of the Future</h5>
+                            <p>
+                                A mix of digital and physical speakers came together in Gothenburg and online to talk
+                                about how we can make cities better. </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+    </section>
+</div>
