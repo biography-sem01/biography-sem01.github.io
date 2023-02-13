@@ -40,9 +40,14 @@
     </section>
     <section id="section-two">
         <div class="container g-0 my-3">
-            <div class="row py-3 my-4" ng-repeat="data in topNews"
-                ng-class="{'row py-3 my-4 flex-column-reverse': $last}">
-                <div ng-bind-html class="col-sm-1 col-md-6">{{data.mediaContent}}
+            <div class="row py-3 my-4" ng-repeat="data in topNews" ng-class="{'row py-3 my-4 flex-row-reverse': $last}">
+                <div class="col-sm-1 col-md-6" ng-if="data.typeMedia == 'video'">
+                    <iframe width="100%" height="350" ng-src="{{data.embedUrl}}" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+                </div>
+                <div class="col-sm-1 col-md-6" ng-if="data.typeMedia == 'photo'">
+                    <img ng-src="{{data.scrMedia}}">
                 </div>
                 <div class="col-sm-1 col-md-6 px-4 d-flex flex-column justify-content-between short-news">
                     <h3 class="title-line-y py-3">{{data.title}}</h3>
@@ -50,22 +55,6 @@
                     <button ng-href="{{data.urlContent}}" class="btn-rm w-25">Read more</button>
                 </div>
             </div>
-            <!-- <div class="row py-3 my-4">
-                <div class="col-sm-1 col-md-6 px-4 d-flex flex-column justify-content-between short-news">
-                    <h3 class="title-line-y py-3">2022 Nobel Prizes: List of Winners</h3>
-                    <p>
-                        The 2022 Nobel Prize winners were announced, honoring individuals who have made exceptional
-                        contributions to their respective fields. The Nobel Prizes, which are awarded annually in six
-                        categories - Physics, Chemistry, Medicine, Literature, Peace, and Economics - recognize
-                        individuals who have advanced our understanding of the world and made a positive impact on
-                        society.
-                    </p>
-                    <button class="btn-rm w-25">Read more</button>
-                </div>
-                <div class="col-sm-1 col-md-6">
-                    <img src="./images/thumb/Nobel-Prize-2022.webp" alt="">
-                </div>
-            </div> -->
         </div>
     </section>
     <section id="section-four" class="video-banner">

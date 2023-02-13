@@ -9,16 +9,14 @@ app.config(function ($routeProvider) {
     // $locationProvider.html5Mode(true);
 });
 
-app.controller('pageHome', function ($scope, $http) {
+app.controller('pageHome', function ($scope, $http, $sce) {
     $http.get("./data/homepage.json").then(function (resjson) {
         $scope.sliders = resjson.data.sliders;
         $scope.cta = resjson.data.callToAction;
         $scope.topNews = resjson.data.topNews;
         $scope.topNews.forEach(function (mysrc) {
             if (mysrc.typeMedia == "video") {
-                mysrc.mediaContent = '<iframe width="100%" height="350" src="' + mysrc.scrMedia + '"title="Nobel Minds 2022" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in- picture; web-share" allowfullscreen></iframe>';
-            } else if (mysrc.typeMedia == "photo") {
-                mysrc.mediaContent = '<img src="' + mysrc.scrMedia + '" alt="">';
+                mysrc.embedUrl = $sce.trustAsResourceUrl('https://www.youtube.com/embed/' + mysrc.scrMedia);
             }
             console.log(mysrc);
         });
