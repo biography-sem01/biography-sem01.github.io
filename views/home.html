@@ -78,7 +78,9 @@
                             <span class="card-datetime">{{news[0].datetime}}</span>
                         </div>
                         <div class="card-content">
-                            <h5 class="card-title">{{news[0].title}}</h5>
+                            <a ng-href="#!/news/{{new.link}}">
+                                <h5 class="card-title py-3">{{news[0].title}}</h5>
+                            </a>
                             <p>
                                 {{news[0].shortnews}}</p>
                         </div>
@@ -86,11 +88,14 @@
                 </div>
                 <div class="col-sm-1 col-md-6 d-flex flex-column justify-content-between">
                     <div class="card-featured-col2 d-flex flex-row" ng-repeat="new in news | limitTo:3:1">
-                        <div class="card-thumb col-4"><img ng-src="{{new.thumburl}}" alt="{{new.title}}">
+                        <div class="card-thumb col-4">
+                            <img ng-src="{{new.thumburl}}" alt="{{new.title}}">
                             <span class="card-datetime">{{new.datetime}}</span>
                         </div>
                         <div class="card-content col-8 px-3 d-flex flex-column justify-content-between">
-                            <h5 class="card-title">{{new.title}}</h5>
+                            <a ng-href="#!/news/{{new.link}}">
+                                <h5 class="card-title">{{new.title}}</h5>
+                            </a>
                             <p>{{new.shortnews}}</p>
                         </div>
                     </div>
