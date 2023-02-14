@@ -18,12 +18,18 @@ app.controller('pageHome', function ($scope, $http, $sce) {
             if (mysrc.typeMedia == "video") {
                 mysrc.embedUrl = $sce.trustAsResourceUrl('https://www.youtube.com/embed/' + mysrc.scrMedia);
             }
-            console.log(mysrc);
         });
     });
 });
 
 app.controller('pagePrizes', function ($scope, $http) {
 
+
+});
+app.controller('pageNews', function ($scope, $http) {
+    $http.get("./data/news.json").then(function (resjson) {
+        $scope.news = resjson.data.news;
+        console.log($scope.fnews);
+    });
 
 });

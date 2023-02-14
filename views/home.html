@@ -57,7 +57,7 @@
             </div>
         </div>
     </section>
-    <section id="section-four" class="video-banner">
+    <section id="section-three" class="video-banner">
         <div class="videobg">
             <video playsinline autoplay muted loop>
                 <source src="./video-nen-background.mp4" mimetype="video/mp4">
@@ -70,111 +70,40 @@
         </div>
     </section>
     <section id="section-five">
-        <div class="container g-0">
+        <div class="container g-0" ng-controller="pageNews">
             <div class="row my-5">
                 <div class="col-sm-1 col-md-6">
                     <div class="card-featured">
-                        <div class="card-thumb"><img src="./images/thumb/The City of the Future.jpg" alt="">
-                            <span class="card-datetime">9 December 2021</span>
+                        <div class="card-thumb"><img ng-src="{{news[0].thumburl}}" alt="">
+                            <span class="card-datetime">{{news[0].datetime}}</span>
                         </div>
                         <div class="card-content">
-                            <h5 class="card-title">The City of the Future</h5>
+                            <h5 class="card-title">{{news[0].title}}</h5>
                             <p>
-                                A mix of digital and physical speakers came together in Gothenburg and online to talk
-                                about how we can make cities better. </p>
+                                {{news[0].shortnews}}</p>
                         </div>
                     </div>
                 </div>
                 <div class="col-sm-1 col-md-6 d-flex flex-column justify-content-between">
-                    <div class="card-featured-col2 d-flex flex-row">
-                        <div class="card-thumb col-4"><img src="./images/thumb/The City of the Future.jpg" alt="">
-                            <span class="card-datetime">9 December 2021</span>
+                    <div class="card-featured-col2 d-flex flex-row" ng-repeat="new in news | limitTo:3:1">
+                        <div class="card-thumb col-4"><img src="{{new.thumburl}}" alt="">
+                            <span class="card-datetime">{{new.datetime}}</span>
                         </div>
                         <div class="card-content col-8 px-3 d-flex flex-column justify-content-between">
-                            <h5 class="card-title">The City of the Future</h5>
-                            <p>
-                                A mix of digital and physical speakers came together in Gothenburg and online to talk
-                                about how we can make cities better. </p>
-                        </div>
-                    </div>
-                    <div class="card-featured-col2 d-flex flex-row">
-                        <div class="card-thumb col-4"><img src="./images/thumb/The City of the Future.jpg" alt="">
-                            <span class="card-datetime">9 December 2021</span>
-                        </div>
-                        <div class="card-content col-8 px-3 d-flex flex-column justify-content-between">
-                            <h5 class="card-title">The City of the Future</h5>
-                            <p>
-                                A mix of digital and physical speakers came together in Gothenburg and online to talk
-                                about how we can make cities better. </p>
-                        </div>
-                    </div>
-                    <div class="card-featured-col2 d-flex flex-row">
-                        <div class="card-thumb col-4"><img src="./images/thumb/The City of the Future.jpg" alt="">
-                            <span class="card-datetime">9 December 2021</span>
-                        </div>
-                        <div class="card-content col-8 px-3 d-flex flex-column justify-content-between">
-                            <h5 class="card-title">The City of the Future</h5>
-                            <p>
-                                A mix of digital and physical speakers came together in Gothenburg and online to talk
-                                about how we can make cities better. </p>
+                            <h5 class="card-title">{{new.title}}</h5>
+                            <p>{{new.shortnews}}</p>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="row g-0 d-flex">
-                <div class="card-news mx-2 col">
-                    <div class="card-thumb"><img src="./images/thumb/The City of the Future.jpg" alt="">
-                        <span class="card-datetime">9 December 2021</span>
+                <div class="card-news mx-2 col" ng-repeat="new in news | limitTo:5:4">
+                    <div class="card-thumb"><img src="{{new.thumburl}}" alt="">
+                        <span class="card-datetime">{{new.datetime}}</span>
                     </div>
                     <div class="card-content d-flex flex-column justify-content-between">
-                        <h5 class="card-title">The City of the Future</h5>
-                        <p>
-                            A mix of digital and physical speakers came together in Gothenburg and online to talk
-                            about how we can make cities better. </p>
-                    </div>
-                </div>
-                <div class="card-news mx-2 col">
-                    <div class="card-thumb"><img src="./images/thumb/The City of the Future.jpg" alt="">
-                        <span class="card-datetime">9 December 2021</span>
-                    </div>
-                    <div class="card-content d-flex flex-column justify-content-between">
-                        <h5 class="card-title">The City of the Future</h5>
-                        <p>
-                            A mix of digital and physical speakers came together in Gothenburg and online to talk
-                            about how we can make cities better. </p>
-                    </div>
-                </div>
-                <div class="card-news mx-2 col">
-                    <div class="card-thumb"><img src="./images/thumb/The City of the Future.jpg" alt="">
-                        <span class="card-datetime">9 December 2021</span>
-                    </div>
-                    <div class="card-content d-flex flex-column justify-content-between">
-                        <h5 class="card-title">The City of the Future</h5>
-                        <p>
-                            A mix of digital and physical speakers came together in Gothenburg and online to talk
-                            about how we can make cities better. </p>
-                    </div>
-                </div>
-                <div class="card-news mx-2 col">
-                    <div class="card-thumb"><img src="./images/thumb/The City of the Future.jpg" alt="">
-                        <span class="card-datetime">9 December 2021</span>
-                    </div>
-                    <div class="card-content d-flex flex-column justify-content-between">
-                        <h5 class="card-title">The City of the Future</h5>
-                        <p>
-                            A mix of digital and physical speakers came together in Gothenburg and online to talk
-                            about how we can make cities better. </p>
-                    </div>
-                </div>
-                <div class="card-news mx-2 col">
-                    <div class="card-thumb"><img src="./images/thumb/The City of the Future.jpg" alt="">
-                        <span class="card-datetime">9 December 2021</span>
-                    </div>
-                    <div class="card-content d-flex flex-column justify-content-between">
-                        <h5 class="card-title">The City of the Future</h5>
-                        <p>
-                            A mix of digital and physical speakers came together in Gothenburg and online to talk
-                            about how we can make cities better. </p>
+                        <h5 class="card-title">{{new.title}}</h5>
+                        <p>{{new.shortnews}}</p>
                     </div>
                 </div>
             </div>
