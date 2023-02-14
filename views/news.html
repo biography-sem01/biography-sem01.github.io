@@ -1,0 +1,11 @@
+<div ng-controller="pageNews">
+    <ul class="phones">
+        <li ng-repeat="new in news" class="thumbnail phone-list-item">
+            <a href="#!/phones/{{new.link}}" class="thumb">
+                <img ng-src="{{new.thumburl}}" alt="{{new.title}}" />
+            </a>
+            <a href="#!/news/{{new.link}}">{{new.title}}</a>
+            <p>{{new.shortnews}}</p>
+        </li>
+    </ul>
+</div>
