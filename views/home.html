@@ -42,7 +42,7 @@
         <div class="container g-0 my-3">
             <div class="row py-3 my-4" ng-repeat="data in topNews" ng-class="{'row py-3 my-4 flex-row-reverse': $last}">
                 <div class="col-sm-1 col-md-6" ng-if="data.typeMedia == 'video'">
-                    <iframe width="100%" height="350" ng-src="{{data.embedUrl}}" frameborder="0"
+                    <iframe width="100%" height="350" ng-src="{{data.scrMedia | embed}}" frameborder="0"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         allowfullscreen></iframe>
                 </div>

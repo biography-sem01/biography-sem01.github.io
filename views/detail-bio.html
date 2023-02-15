@@ -1,0 +1,105 @@
+<section ng-controller="bioDetaile">
+    <div class="container">
+        <div class="row short-info d-flex justify-content-between p-5">
+            <div class="col-md-3">
+                <img ng-src="{{fullinfo.thumburl}}" alt="">
+                <span>© Nobel Prize Outreach.<br>Photo: Fergus Kennedy</span>
+            </div>
+            <div class="col-md-8 d-flex flex-column justify-content-between">
+                <h1>{{fullinfo.title}}</h1>
+                <span>{{fullinfo.winnerof}}</span>
+                <p>Born: {{fullinfo.born}}</p>
+                <p ng-if="fullinfo.atin">Affiliation at the time of the award: {{fullinfo.atin}}</p>
+                <p>Prize motivation: “{{fullinfo.prizemotivation}}”</p>
+                <p>Prize share: {{fullinfo.prizeshare}}</p>
+                <ul>
+                    <li ng-if="fullinfo.biography">
+                        <a href="#Biography">Biography</a>
+                    </li>
+                    <li>
+                        <a href="#Life-education">Life and education</a>
+                    </li>
+                    <li>
+                        <a href="#Research-career">Research & career</a>
+                    </li>
+                    <li>
+                        <a href="#Awards">Awards and honors</a>
+                    </li>
+                    <li>
+                        <a href="#Timeline">Timeline</a>
+                    </li>
+                    <li>
+                        <a href="#Selected-works">Selected Works</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <div class="row full-info my-5">
+            <div class="col-md-2 p-0"></div>
+            <div class="col-md-10 row row-cols-1 g-0">
+                <div id="Biography" class="box-info p-4" ng-if="fullinfo.biography">
+                    <h2 class="h-line-x">Biography:</h2>
+                    <div ng-bind-html="fullinfo.biography | convert"></div>
+                </div>
+                <div id="Life-education" class="box-info p-4" ng-if="fullinfo.lifeedu">
+                    <h2 class="h-line-x">Early life and education:</h2>
+                    <div ng-bind-html="fullinfo.lifeedu | convert"></div>
+                </div>
+                <div id="Research-career" class="box-info p-4" ng-if="fullinfo.researchcareer">
+                    <h2 class="h-line-x">Research and career:</h2>
+                    <div ng-bind-html="fullinfo.researchcareer | convert"></div>
+                </div>
+                <div id="Awards" class="box-info p-4" ng-if="fullinfo.awardshonors">
+                    <h2 class="h-line-x">Awards and honors:</h2>
+                    <div ng-bind-html="fullinfo.awardshonors | convert"></div>
+                    <h3>{{fullinfo.videoawards.title}}</h3>
+                    <iframe width="100%" height="550" ng-src="{{fullinfo.videoawards.id | embed}}"
+                        title="Nobel Minds 2022" frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe>
+                    <p>Roger Penrose delivered his Nobel Lecture on Tuesday 8 December 2020. He was introduced by
+                        Professor Ariel Gobar.</p>
+                </div>
+                <div id="Timeline" class="box-info p-4">
+                    <h2 class="h-line-x">Timeline:</h2>
+                    <ul class="timeline">
+                        <li><span>2020</span>Lorem ipsum dolor sit amet, consectetur.</li>
+                    </ul>
+                </div>
+                <div id="Selected-works" class="box-info p-4">
+                    <h2 class="h-line-x">Biography:</h2>
+                    <p>Sir Roger Penrose OM FRS HonFInstP (born 8 August 1931) is a British mathematician,
+                        mathematical physicist, philosopher of science and Nobel Laureate in Physics.He is
+                        Emeritus Rouse Ball Professor of Mathematics in the University of Oxford, an emeritus fellow
+                        of Wadham College, Oxford, and an honorary fellow of St John's College, Cambridge and
+                        University College London.</p>
+                    <p>
+                        Penrose has contributed to the mathematical physics of general relativity and cosmology. He
+                        has received several prizes and awards, including the 1988 Wolf Prize in Physics, which he
+                        shared with Stephen Hawking for the Penrose - Hawking singularity theorems,and one half of
+                        the 2020 Nobel Prize in Physics "for the discovery that black hole formation is a robust
+                        prediction of the general theory of relativity". He is regarded as one of
+                        the greatest living physicists, mathematicians and scientists, and is particularly noted for
+                        the breadth and depth of his work in both natural and formal sciences.</p>
+                </div>
+                <div id="References" class="box-info p-4">
+                    <h2 class="h-line-x">Biography:</h2>
+                    <p>Sir Roger Penrose OM FRS HonFInstP (born 8 August 1931) is a British mathematician,
+                        mathematical physicist, philosopher of science and Nobel Laureate in Physics.He is
+                        Emeritus Rouse Ball Professor of Mathematics in the University of Oxford, an emeritus fellow
+                        of Wadham College, Oxford, and an honorary fellow of St John's College, Cambridge and
+                        University College London.</p>
+                    <p>
+                        Penrose has contributed to the mathematical physics of general relativity and cosmology. He
+                        has received several prizes and awards, including the 1988 Wolf Prize in Physics, which he
+                        shared with Stephen Hawking for the Penrose - Hawking singularity theorems,and one half of
+                        the 2020 Nobel Prize in Physics "for the discovery that black hole formation is a robust
+                        prediction of the general theory of relativity". He is regarded as one of
+                        the greatest living physicists, mathematicians and scientists, and is particularly noted for
+                        the breadth and depth of his work in both natural and formal sciences.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- End Body Content -->
