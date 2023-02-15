@@ -14,22 +14,22 @@
                 <p>Prize share: {{fullinfo.prizeshare}}</p>
                 <ul>
                     <li ng-if="fullinfo.biography">
-                        <a href="#Biography">Biography</a>
+                        <a ng-href="#Biography">Biography</a>
                     </li>
-                    <li>
-                        <a href="#Life-education">Life and education</a>
+                    <li ng-if="fullinfo.lifeedu">
+                        <a ng-href="#Life-education">Life and education</a>
                     </li>
-                    <li>
-                        <a href="#Research-career">Research & career</a>
+                    <li ng-if="fullinfo.researchcareer">
+                        <a ng-href="#Research-career">Research & career</a>
                     </li>
-                    <li>
-                        <a href="#Awards">Awards and honors</a>
+                    <li ng-if="fullinfo.awardshonors">
+                        <a ng-href="#Awards">Awards and honors</a>
                     </li>
-                    <li>
-                        <a href="#Timeline">Timeline</a>
+                    <li ng-if="fullinfo.timeline">
+                        <a ng-href="#Timeline">Timeline</a>
                     </li>
-                    <li>
-                        <a href="#Selected-works">Selected Works</a>
+                    <li ng-if="fullinfo.books">
+                        <a ng-href="#Selected-works">Selected Works</a>
                     </li>
                 </ul>
             </div>
@@ -52,51 +52,34 @@
                 <div id="Awards" class="box-info p-4" ng-if="fullinfo.awardshonors">
                     <h2 class="h-line-x">Awards and honors:</h2>
                     <div ng-bind-html="fullinfo.awardshonors | convert"></div>
-                    <h3>{{fullinfo.videoawards.title}}</h3>
-                    <iframe width="100%" height="550" ng-src="{{fullinfo.videoawards.id | embed}}"
-                        title="Nobel Minds 2022" frameborder="0"
-                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                        allowfullscreen></iframe>
-                    <p>Roger Penrose delivered his Nobel Lecture on Tuesday 8 December 2020. He was introduced by
-                        Professor Ariel Gobar.</p>
+                    <div ng-if="fullinfo.videoawards">
+                        <h3>{{fullinfo.videoawards.title}}</h3>
+                        <iframe width="100%" height="550" ng-src="{{fullinfo.videoawards.id | embed}}"
+                            title="Nobel Minds 2022" frameborder="0"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            allowfullscreen></iframe>
+                        <p>{{fullinfo.videoawards.info}}</p>
+                    </div>
                 </div>
-                <div id="Timeline" class="box-info p-4">
+                <div id="Timeline" class="box-info p-4" ng-if="fullinfo.timeline">
                     <h2 class="h-line-x">Timeline:</h2>
                     <ul class="timeline">
-                        <li><span>2020</span>Lorem ipsum dolor sit amet, consectetur.</li>
+                        <li ng-repeat="time in fullinfo.timeline"><span>{{time.year}}</span>{{time.content}}</li>
                     </ul>
                 </div>
-                <div id="Selected-works" class="box-info p-4">
-                    <h2 class="h-line-x">Biography:</h2>
-                    <p>Sir Roger Penrose OM FRS HonFInstP (born 8 August 1931) is a British mathematician,
-                        mathematical physicist, philosopher of science and Nobel Laureate in Physics.He is
-                        Emeritus Rouse Ball Professor of Mathematics in the University of Oxford, an emeritus fellow
-                        of Wadham College, Oxford, and an honorary fellow of St John's College, Cambridge and
-                        University College London.</p>
-                    <p>
-                        Penrose has contributed to the mathematical physics of general relativity and cosmology. He
-                        has received several prizes and awards, including the 1988 Wolf Prize in Physics, which he
-                        shared with Stephen Hawking for the Penrose - Hawking singularity theorems,and one half of
-                        the 2020 Nobel Prize in Physics "for the discovery that black hole formation is a robust
-                        prediction of the general theory of relativity". He is regarded as one of
-                        the greatest living physicists, mathematicians and scientists, and is particularly noted for
-                        the breadth and depth of his work in both natural and formal sciences.</p>
+                <div id="Selected-works" class="box-info p-4" ng-if="fullinfo.books">
+                    <h2 class="h-line-x">Selected works:</h2>
+                    <ul>
+                        <ul class="books">
+                            <li ng-repeat="book in fullinfo.books"><a ng-href="{{book.link}}">{{book.name}}</a></li>
+                        </ul>
+                    </ul>
                 </div>
-                <div id="References" class="box-info p-4">
-                    <h2 class="h-line-x">Biography:</h2>
-                    <p>Sir Roger Penrose OM FRS HonFInstP (born 8 August 1931) is a British mathematician,
-                        mathematical physicist, philosopher of science and Nobel Laureate in Physics.He is
-                        Emeritus Rouse Ball Professor of Mathematics in the University of Oxford, an emeritus fellow
-                        of Wadham College, Oxford, and an honorary fellow of St John's College, Cambridge and
-                        University College London.</p>
-                    <p>
-                        Penrose has contributed to the mathematical physics of general relativity and cosmology. He
-                        has received several prizes and awards, including the 1988 Wolf Prize in Physics, which he
-                        shared with Stephen Hawking for the Penrose - Hawking singularity theorems,and one half of
-                        the 2020 Nobel Prize in Physics "for the discovery that black hole formation is a robust
-                        prediction of the general theory of relativity". He is regarded as one of
-                        the greatest living physicists, mathematicians and scientists, and is particularly noted for
-                        the breadth and depth of his work in both natural and formal sciences.</p>
+                <div id="References" class="box-info p-4" ng-if="fullinfo.refs">
+                    <h2 class="h-line-x">References:</h2>
+                    <ul class="links">
+                        <li ng-repeat="ref in fullinfo.refs"><a ng-href="{{ref.link}}">{{ref.name}}</a></li>
+                    </ul>
                 </div>
             </div>
         </div>

@@ -89,7 +89,7 @@
                     "content": "Penrose is awarded the Nobel Prize in Physics, along with Reinhard Genzel and Andrea Ghez, for their discoveries in black hole physics."
                 }
             ],
-            "book": [
+            "books": [
                 {
                     "name": "The Road to Reality: A Complete Guide to the Laws of the Universe",
                     "link": "https://www.amazon.com/Road-Reality-Complete-Guide-Universe/dp/0679776311"
@@ -115,7 +115,7 @@
                     "link": ""
                 }
             ],
-            "ref": [
+            "refs": [
                 {
                     "name": "10 Roger Penrose Facts That You Didn't Know",
                     "link": "https://www.wondersofphysics.com/2021/08/roger-penrose-amazing-facts.html"
