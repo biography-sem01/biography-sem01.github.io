@@ -13,7 +13,11 @@ app.config(function ($routeProvider) {
     // $locationProvider.html5Mode(true);
 });
 
-app.controller('pageHome', function ($scope, $http, $sce) {
+app.run(function ($rootScope, $anchorScroll) {
+    $rootScope.scrollTo = function (id) { $anchorScroll(id); };
+});
+
+app.controller('pageHome', function ($scope, $http) {
     $http.get("./data/homepage.json").then(function (resjson) {
         $scope.sliders = resjson.data.sliders;
         $scope.cta = resjson.data.callToAction;
@@ -25,16 +29,21 @@ app.controller('pageHome', function ($scope, $http, $sce) {
         // });
     });
 });
-app.controller('pageNobelList', function ($scope, $http) {
+app.controller('pageNobelList', function ($scope, $http, $location) {
     $http.get("./data/nobellist.json").then(function (resjson) {
         $scope.nobellist = resjson.data.nobellist;
+
     });
+    let searchParams = $location.search();
+    var keywords = searchParams.keywords;
+    console.log(keywords);
 });
-app.controller('bioDetaile', function ($scope, $http, $routeParams, $sce) {
+app.controller('bioDetaile', function ($scope, $http, $routeParams) {
     $http.get("./data/nobellist.json").then(function (resjson) {
         $scope.detailbio = resjson.data.nobellist;
         var link = $routeParams.bioId;
         $scope.fullinfo = $scope.detailbio.find(function (item) { return item.link === link; });
+        // $scope.scrollTo = function (id) { $anchorScroll(id); };
     });
 });
 app.controller('pageNews', function ($scope, $http) {

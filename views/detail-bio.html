@@ -13,23 +13,23 @@
                 <p>Prize motivation: “{{fullinfo.prizemotivation}}”</p>
                 <p>Prize share: {{fullinfo.prizeshare}}</p>
                 <ul>
-                    <li ng-if="fullinfo.biography">
-                        <a ng-href="#Biography">Biography</a>
+                    <li ng-if="fullinfo.biography" ng-click="scrollTo('Biography')">
+                        Biography
                     </li>
-                    <li ng-if="fullinfo.lifeedu">
-                        <a ng-href="#Life-education">Life and education</a>
+                    <li ng-if="fullinfo.lifeedu" ng-click="scrollTo('Life-education')">
+                        Life and educatio
                     </li>
-                    <li ng-if="fullinfo.researchcareer">
-                        <a ng-href="#Research-career">Research & career</a>
+                    <li ng-if="fullinfo.researchcareer" ng-click="scrollTo('BiogResearch-careeraphy')">
+                        Research & career
                     </li>
-                    <li ng-if="fullinfo.awardshonors">
-                        <a ng-href="#Awards">Awards and honors</a>
+                    <li ng-if="fullinfo.awardshonors" ng-click="scrollTo('Awards')">
+                        Awards and honors
                     </li>
-                    <li ng-if="fullinfo.timeline">
-                        <a ng-href="#Timeline">Timeline</a>
+                    <li ng-if="fullinfo.timeline" ng-click="scrollTo('Timeline')">
+                        Timeline
                     </li>
-                    <li ng-if="fullinfo.books">
-                        <a ng-href="#Selected-works">Selected Works</a>
+                    <li ng-if="fullinfo.books" ng-click="scrollTo('Selected-works')">
+                        Selected Works
                     </li>
                 </ul>
             </div>
@@ -69,10 +69,8 @@
                 </div>
                 <div id="Selected-works" class="box-info p-4" ng-if="fullinfo.books">
                     <h2 class="h-line-x">Selected works:</h2>
-                    <ul>
-                        <ul class="books">
-                            <li ng-repeat="book in fullinfo.books"><a ng-href="{{book.link}}">{{book.name}}</a></li>
-                        </ul>
+                    <ul class="books">
+                        <li ng-repeat="book in fullinfo.books"><a ng-href="{{book.link}}">{{book.name}}</a></li>
                     </ul>
                 </div>
                 <div id="References" class="box-info p-4" ng-if="fullinfo.refs">

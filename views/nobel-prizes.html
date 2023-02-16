@@ -1,11 +1,33 @@
-<div ng-controller="pageNews">
-    <ul class="phones">
-        <li ng-repeat="new in news" class="thumbnail phone-list-item">
-            <a href="#!/news/{{new.link}}" class="thumb">
-                <img ng-src="{{new.thumburl}}" alt="{{new.title}}" />
-            </a>
-            <a href="#!/news/{{new.link}}">{{new.title}}</a>
-            <p>{{new.shortnews}}</p>
-        </li>
-    </ul>
+<div ng-controller="pageNobelList">
+    <div class="container g-0 py-5">
+        <div class="row">
+            <h3>Explore prizes and laureates</h3>
+            <form class="m-3" ng-submit="filterResults()">
+                <div class="row d-flex justify-content-around">
+                    <div class="col-6">
+                        <select name="categories" id="form-categories" size="3" ng-model="selectedCategory">
+                            <option class="d-none" value="" selected></option>
+                            <option class="col-4" value="physics">Physics</option>
+                            <option class="col-4" value="chemistry">Chemistry</option>
+                            <option class="col-4" value="medicine">Medicine</option>
+                        </select>
+                    </div>
+                    <input type="number" name="year" id="year" class="col-2" placeholder="2022" min="1901" max="2022"
+                        ng-model="selectedYear">
+                    <input type="submit" value="Submit" class="btn-search col-2">
+                </div>
+            </form>
+        </div>
+        <div class="row d-flex flex-wrap">
+            <div class="row col-6 d-flex justify-content-between p-3"
+                ng-repeat="nobel in nobellist | filter:{category:selectedCategory,year:selectedYear}">
+                <div class="col-4"><img ng-src="{{nobel.thumburl}}" alt="{{nobel.title}}"></div>
+                <div class="col-7 d-flex flex-column justify-content-around">
+                    <h5>{{nobel.title}}</h5>
+                    <p>{{nobel.winnerof}}</p>
+                    <p>Prize motivation: {{nobel.prizemotivation}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
