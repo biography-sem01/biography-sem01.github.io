@@ -16,6 +16,14 @@ app.config(function ($routeProvider) {
 
 app.run(function ($rootScope, $anchorScroll) {
     $rootScope.scrollTo = function (id) { $anchorScroll(id); };
+    $rootScope.scrollFunction = function () {
+        if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+            document.getElementById("backToTop").style.cssText = "display: grid; animation-name: fadeIn";
+        } else {
+            document.getElementById("backToTop").style.cssText = "display: none; animation-name: fadeOut";
+        }
+    };
+    window.onscroll = $rootScope.scrollFunction;
 });
 
 app.controller('pageHome', function ($scope, $http) {
@@ -37,7 +45,6 @@ app.controller('pageNobelList', function ($scope, $http, $location) {
     });
     let searchParams = $location.search();
     var keywords = searchParams.keywords;
-    console.log(keywords);
 });
 app.controller('bioDetaile', function ($scope, $http, $routeParams) {
     $http.get("./data/nobellist.json").then(function (resjson) {

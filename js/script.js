@@ -1,11 +1,12 @@
-// window.onscroll = function () { scrollFunction() };
+let mybutton = document.getElementsByClassName("backToTop");
 
-// function scrollFunction() {
-//     if (document.body.scrollTop > 80 || document.documentElement.scrollTop > 80) {
-//         document.getElementById("navbar").style.padding = "30px 10px";
-//         document.getElementById("logo").style.fontSize = "25px";
-//     } else {
-//         document.getElementById("navbar").style.padding = "80px 10px";
-//         document.getElementById("logo").style.fontSize = "35px";
-//     }
-// }
+// When the user scrolls down 20px from the top of the document, show the button
+window.onscroll = function () { scrollFunction() };
+
+function scrollFunction() {
+    if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+        mybutton.style.display = "block";
+    } else {
+        mybutton.style.display = "none";
+    }
+}

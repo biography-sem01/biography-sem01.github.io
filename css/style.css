@@ -593,8 +593,8 @@ width: fit-content;
 	line-height: 1.2;
 	position: relative;
 }
-.backToTop {
-  display: grid;
+#backToTop {
+  display: none;
   width: 50px;
   height: 50px;
   position: fixed;
@@ -605,17 +605,20 @@ width: fit-content;
   place-content: center;
   border-radius: 50%;
   z-index: 999;
+  animation-duration: 2s;
+}
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+@keyframes fadeOut {
+  from { opacity: 1; }
+  to { opacity: 0; }
 }
 
 
 
 /* Luan Style */
-
-* {
-  padding: 0;
-  margin: 0;
-  box-sizing: border-box;
-}
 
 /* Big Image */
 .imageFirst {
@@ -702,21 +705,6 @@ width: fit-content;
 
 .infor-1-2 p {
   color: #2E2A25;
-}
-
-ul {
-  margin-left: 24px;
-}
-
-li {
-  font-size: 18px;
-  color: #2E2A25;
-  margin-bottom: 16px;
-}
-
-ul li::marker {
-  color: #CEA152;
-  font-size: 3rem;
 }
 
 /* Information 02 */
