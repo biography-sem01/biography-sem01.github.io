@@ -1,3 +1,4 @@
+// Danh
 // Khai bao Angular App
 var app = angular.module("myApp", ["ngRoute"]);
 // app.config(function ($routeProvider, $locationProvider) {
@@ -8,7 +9,7 @@ app.config(function ($routeProvider) {
         .when("/news/:newsId", { templateUrl: "./views/news-detail.html", controller: 'newDetaile' })
         .when("/nobel-prizes", { templateUrl: "./views/nobel-prizes.html", controller: 'pageNobelList' })
         .when("/nobel-prizes/:bioId", { templateUrl: "./views/detail-bio.html", controller: 'bioDetaile' })
-        .when("/bio", { templateUrl: "./views/detail-biography.html" })
+        .when("/about-us", { templateUrl: "./views/about-us.html", controller: 'pageAboutUs' })
         .otherwise({ redirectTo: '/' })
     // $locationProvider.html5Mode(true);
 });
@@ -63,3 +64,14 @@ app.controller('newDetaile', function ($scope, $http, $routeParams) {
 
 app.filter('convert', function ($sce) { return $sce.trustAsHtml; });
 app.filter('embed', function ($sce) { return function (url) { return $sce.trustAsResourceUrl(url); }; });
+
+// Luan
+
+app.controller("pageAboutUs", function ($scope, $http) {
+    $scope.inFors = "";
+    $http.get("./data/aboutus.json").then(function (response) {
+        $scope.inFors = response.data;
+    })
+});
+
+// Tuan

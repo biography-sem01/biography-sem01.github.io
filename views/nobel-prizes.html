@@ -21,7 +21,8 @@
         <div class="row d-flex flex-wrap">
             <div class="row col-6 d-flex justify-content-between p-3"
                 ng-repeat="nobel in nobellist | filter:{category:selectedCategory,year:selectedYear}">
-                <div class="col-4"><img ng-src="{{nobel.thumburl}}" alt="{{nobel.title}}"></div>
+                <div class="col-4"><a ng-href="#!/nobel-prizes/{{nobel.link}}"><img ng-src="{{nobel.thumburl}}"
+                            alt="{{nobel.title}}"></a></div>
                 <div class="col-7 d-flex flex-column justify-content-around">
                     <h5>{{nobel.title}}</h5>
                     <p>{{nobel.winnerof}}</p>
