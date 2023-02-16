@@ -658,13 +658,6 @@ width: fit-content;
 }
 
 /* Information 01 - Left */
-.infor-1-1 p {
-  color: #2E2A25;
-}
-
-.infor-1-1, .infor-1-2 {
-  background-color: #fff;
-}
 
 .infor-1-1 .infor-1-1-first {
   font-size: 24px;
