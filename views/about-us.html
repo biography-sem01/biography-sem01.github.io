@@ -1,302 +1,78 @@
-<link rel="stylesheet" href="/css/lightbox.min.css">
-<!-- Link Font Awesome - Icon -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+<div ng-controller="pageAboutUs">
+    <div class="container-fluid bgtitle">
+        <h1>{{aboutus.title}}</h1>
+    </div>
+    <div class="container content">
+        <div class="row my-5">
+            <div class="col-7">
+                <h2 class="h-line-x">Who we are and what we do</h2>
+                <p>Alfred Nobel had a vision of a better world. He believed that people are capable of helping to
+                    improve society through knowledge, science and humanism. This is why he created a prize that would
+                    reward the discoveries that have conferred the greatest benefit to humankind. Since 1901, the Nobel
+                    Prize has been awarded in the fields of physics, chemistry, physiology or medicine, literature and
+                    peace, while a memorial prize in economic sciences was added in 1968.</p>
 
-<!-- <div class="container-fluid"> -->
-<!-- Image -->
-<div class="container">
-    <div class="row imageFirst">
-        <div class="col-md-12 ">
-        </div>
-    </div>
-</div>
-<!-- Sub Text -->
-<div class="row subText">
-    <div class="col-md-12">
-        <p>A painting by Swedish artist Emil Österman depicting the founder of the Nobel Prize, Alfred Nobel.
-            <span>&copy; Nobel Media. Photo: Alexander Mahmoud</span>
-        </p>
-    </div>
-</div>
-<!-- Header 1 -->
-<div class="row header-1">
-    <div class="col-md-12">
-        <p>THE MAN BEHIND THE PRIZE</p>
-        <p>ALFRED NOBEL</p>
-    </div>
-</div>
-<!-- Information 01 -->
-<div class="container container-infor-1">
-    <div class="row infor-1">
-        <div class="col-md-8 infor-1-1">
-            <hr>
-            <p class="infor-1-1-first">{{inFors.inforOne_One[0].paraFirst}}</p>
-            <p class="infor-1-1-second">{{inFors.inforOne_One[1].paraSecond}}</p>
-            <p class="infor-1-1-third">{{inFors.inforOne_One[2].paraThird}}</p>
-            <a class="infor-1-1-fourth" href="#">{{inFors.inforOne_One[3].paraFourth}}</a>
-        </div>
+                <p>The economic foundations for the Nobel Prize were laid in 1895, when Alfred Nobel signed his last
+                    will and left much of his wealth to the establishment of a prize and the subsequent Nobel
+                    Foundation, which is tasked with a mission to manage his fortune and has ultimate responsibility for
+                    fulfilling the intentions of Nobel&rsquo;s will. In accordance with the instructions Nobel left
+                    through his will, various independent prize-awarding institutions have selected Nobel Laureates in
+                    each prize category for more than a century.</p>
 
-        <div class="col-md-4 infor-1-2">
-            <hr>
-            <p class="infor-1-2-first">{{inFors.inforOne_Two[0].title}}</p>
-            <ul>
-                <li>{{inFors.inforOne_Two[1].item1}}</li>
-                <li>{{inFors.inforOne_Two[2].item2}}</li>
-                <li>{{inFors.inforOne_Two[3].item3}}</li>
-                <li>{{inFors.inforOne_Two[4].item4}}</li>
-                <li>{{inFors.inforOne_Two[5].item5}}</li>
-            </ul>
+                <p>Today, there are also several outreach organisations and activities that have been developed to
+                    inspire generations and disseminate knowledge about the Nobel Prize through events, exhibitions,
+                    educational efforts and digital outreach.</p>
+            </div>
+            <div class="col-5 d-flex flex-column justify-content-center align-items-center">
+                <img src="./images/rsz_banner-nobel-prizess.png" alt="">
+                <caption>Overview of the Nobel Prize</caption>
+            </div>
         </div>
-    </div>
-</div>
-
-<!-- Information 02 -->
-<div class="container">
-    <div class="row infor-2">
-        <div class="col-md-6 infor-2-1">
-            <a href="images/pic2.jpg" data-lightbox="mygallery" data-title="Alfred Nobel (1833 - 1896)">
-                <img src="images/pic2.jpg" alt="#" class="img-fluid img-responsive image-2">
-            </a>
+        <div class="count-content my-5">
+            <div class="col-3 box-count d-flex flex-column justify-content-around align-items-center">
+                <i class="bi bi-calendar3"></i>
+                <span class="counter">29 June 1900</span>
+                <p>Established</p>
+            </div>
+            <div class="col-3 box-count d-flex flex-column justify-content-around align-items-center">
+                <i class="bi bi-people"></i>
+                <span class="counter">923</span>
+                <p>Laureates</p>
+            </div>
+            <div class="col-3 box-count d-flex flex-column justify-content-around align-items-center">
+                <i class="bi bi-book"></i>
+                <span class="counter">6</span>
+                <p>Prize categories</p>
+            </div>
         </div>
-        <div class="col-md-6">
-            <!-- Row 1 -->
-            <div class="col-md-12 infor-2-2">
-                <h4 class="infor-2-2-title">{{inFors.toggleEvent[0].title}}</h4>
-                <button class="infor-2-2-question">{{inFors.toggleEvent[1].question1}}</button>
-                <div class="infor-2-2-panel">
-                    <p class="infor-2-2-answer">
-                        {{inFors.toggleEvent[1].answer1}}
-                    </p>
-                </div>
+        <div class="bgcontent my-5 p-5">
+            <div class="title-content">
+                <h2>THE MAN BEHIND THE PRIZE<br>ALFRED NOBEL</h2>
             </div>
-            <!-- Row 2 -->
-            <div class="col-md-12 infor-2-2">
-                <button class="infor-2-2-question">{{inFors.toggleEvent[2].question2}}</button>
-                <div class="infor-2-2-panel">
-                    <p class="infor-2-2-answer">
-                        {{inFors.toggleEvent[2].answer2}}
-                    </p>
-                </div>
+        </div>
+        <div class="row my-5">
+            <div class="col-4">
+                <h3 class="h-line-x">Quick facts</h3>
+                <ul>
+                    <li>Born: 21 October 1833</li>
+                    <li>Died: 10 December 1896</li>
+                    <li>Known for: inventing dynamite and holder of 355 patents</li>
+                    <li>Professions: chemist, inventor, engineer, entrepreneur, businessman, author
+                    </li>
+                    <li>Will: left 31 million SEK (about 265 million dollar today) to fund the prizes
+                    </li>
+                </ul>
             </div>
-            <!-- Row 3 -->
-            <div class="col-md-12 infor-2-2">
-                <button class="infor-2-2-question"> {{inFors.toggleEvent[3].question3}}</button>
-                <div class="infor-2-2-panel">
-                    <p class="infor-2-2-answer">
-                        {{inFors.toggleEvent[3].answer3}}
-                    </p>
-                </div>
-            </div>
-            <!-- Row 4 -->
-            <div class="col-md-12 infor-2-2">
-                <button class="infor-2-2-question"> {{inFors.toggleEvent[4].question4}}</button>
-                <div class="infor-2-2-panel">
-                    <p class="infor-2-2-answer">
-                        {{inFors.toggleEvent[4].answer4}}
-                    </p>
-                </div>
-            </div>
-            <!-- Row 5 -->
-            <div class="col-md-12 infor-2-2">
-                <button class="infor-2-2-question"> {{inFors.toggleEvent[5].question5}}</button>
-                <div class="infor-2-2-panel">
-                    <p class="infor-2-2-answer">
-                        {{inFors.toggleEvent[5].answer5}}
-                    </p>
-                </div>
+            <div class="col-8 d-flex flex-column justify-content-between">
+                <h3 class="h-line-x">For the greatest benefit to humankind</h3>
+                <p>Alfred Nobel was an inventor,
+                    entrepreneur, scientist and businessman who also wrote poetry and drama. His varied interests are
+                    reflected in the prize he established and which he lay the foundation for in 1895 when he wrote his
+                    last will, leaving much of his wealth to the establishment of the prize.</p>
+                <p>Since 1901, the Nobel Prize has been honoring men and women from
+                    around the world for outstanding achievements in physics, chemistry, physiology or medicine,
+                    literature and for work in peace.</p>
             </div>
         </div>
     </div>
 </div>
-<!-- Information 03 -->
-<div class="container">
-    <div class="row infor-3">
-        <div class="col-md-6 infor-3-1">
-            <hr>
-            <a href="#">{{inFors.inforThree[0].title}}</a>
-            <p class="infor-3-1-para"> {{inFors.inforThree[0].paraOne}}
-            </p>
-            <p>{{inFors.inforThree[0].paraTwo}}</p>
-        </div>
-        <div class="col-md-6 infor-3-2">
-            <hr style="display: none;">
-            <img src="images/pic3.jpg" alt="The will" class="infor-3-2-image" width="496" height="328">
-            <p>The will of Alfred Nobel <span>&copy; Nobel Media AB 2018. <br> Photo: Alexander Mahmoud</span></p>
-        </div>
-    </div>
-</div>
-<!-- Information 04 -->
-<div class="container">
-    <div class="row infor-4">
-        <div class="col-md-12 infor-4-1">
-            <hr>
-            <h3 style="color: #CEA152; font-weight: 600;">{{inFors.inforFourth.title}}</h3>
-            <hr>
-        </div>
-    </div>
-</div>
-<!-- Information 04 - Timeline -->
-<div class="container">
-    <div class="row">
-        <div class="col-md-12">
-            <div class="process-wrapper">
-                <div id="progress-bar-container">
-                    <ul>
-                        <li class="step step01 active">
-                            <div class="step-inner">{{inFors.timeline[0].year1}}</div>
-                        </li>
-                        <li class="step step02">
-                            <div class="step-inner">{{inFors.timeline[1].year2}}</div>
-                        </li>
-                        <li class="step step03">
-                            <div class="step-inner">{{inFors.timeline[2].year3}}</div>
-                        </li>
-                        <li class="step step04">
-                            <div class="step-inner">{{inFors.timeline[3].year4}}</div>
-                        </li>
-                        <li class="step step05">
-                            <div class="step-inner">{{inFors.timeline[4].year5}}</div>
-                        </li>
-                    </ul>
-
-                    <div id="line">
-                        <div id="line-progress"></div>
-                    </div>
-                </div>
-
-                <div id="progress-content-section">
-                    <div class="section-content discovery active">
-                        <h2 style="font-weight: 600;">{{inFors.timeline[0].year1}}</h2>
-                        <p>
-                            {{inFors.timeline[0].para1}}
-                        </p>
-                    </div>
-
-                    <div class="section-content strategy">
-                        <h2 style="font-weight: 600;">{{inFors.timeline[1].year2}}</h2>
-                        <p>
-                            {{inFors.timeline[1].para2}}
-                        </p>
-                    </div>
-
-                    <div class="section-content creative">
-                        <h2 style="font-weight: 600;">{{inFors.timeline[2].year3}}</h2>
-                        <p>
-                            {{inFors.timeline[2].para3}}
-                        </p>
-                    </div>
-
-                    <div class="section-content production">
-                        <h2 style="font-weight: 600;">{{inFors.timeline[3].year4}}</h2>
-                        <p>
-                            {{inFors.timeline[3].para4}}
-                        </p>
-                    </div>
-
-                    <div class="section-content analysis">
-                        <h2 style="font-weight: 600;">{{inFors.timeline[4].year5}}</h2>
-                        <p>
-                            {{inFors.timeline[4].para5}}
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Information 05 -->
-<div class="container">
-    <div class="row infor-5">
-        <div class="col-md-12 infor-5-1">
-            <hr>
-            <h3>{{inFors.inforFifth[0].title}}</h3>
-        </div>
-        <!-- Image 01 -->
-        <div class="col-md-4 infor-5-2">
-            <hr>
-            <h3>{{inFors.inforFifth[1].title1}}</h3>
-            <p>{{inFors.inforFifth[1].para1}}
-            </p>
-            <img src="images/pic4.png" alt="#">
-            <p>Alfred Nobel's dynamite, 1856. <span style="color: #8a8a8d;">Photo: Public domain.</span></p>
-        </div>
-        <!-- Image 02 -->
-        <div class="col-md-4 infor-5-2">
-            <hr>
-            <h3>{{inFors.inforFifth[2].title2}}</h3>
-            <p>{{inFors.inforFifth[2].para2}}
-            </p>
-            <img src="images/pic9.jpg" alt="">
-            <p>A young Alfred Nobel, 1853. <span style="color: #8a8a8d;">Photo: Provided by Nobel Foundation.</span></p>
-        </div>
-        <!-- Image 03 -->
-        <div class="col-md-4 infor-5-2">
-            <hr>
-            <h3>{{inFors.inforFifth[3].title3}}</h3>
-            <p>{{inFors.inforFifth[3].para3}}
-            </p>
-            <img src="images/pic6.jpg" alt="">
-            <p>A German patent Alfred Nobel acquired. <span style="color: #8a8a8d;">Photo: Public domain.</span></p>
-        </div>
-    </div>
-</div>
-<!-- Information 06 -->
-<div class="container">
-    <div class="row infor-6">
-        <div class="col-md-12 infor-6-1">
-            <hr>
-            <h3>{{inFors.inforSix[0].title}}</h3>
-        </div>
-        <!-- Facebook -->
-        <div class="col-md-3">
-            <hr>
-            <div class="col-md-12">
-                <h3>{{inFors.inforSix[1].title1}}</h3>
-            </div>
-            <div class="col-md-12">
-                <i class="fa-brands fa-square-facebook fa-2x" style="color: rgb(62, 82, 147);"></i>
-                <p style="display: inline-block;">{{inFors.inforSix[1].para1}}</p>
-            </div>
-        </div>
-        <!-- Youtube -->
-        <div class="col-md-3">
-            <hr>
-            <div class="col-md-12">
-                <h3>{{inFors.inforSix[2].title2}}</h3>
-            </div>
-            <div class="col-md-12">
-                <i class="fa-brands fa-square-youtube fa-2x" style="color: rgb(237, 49, 36);"></i>
-                <p style="display: inline-block;">{{inFors.inforSix[2].para2}}</p>
-            </div>
-        </div>
-        <!-- Instagram -->
-        <div class="col-md-3">
-            <hr>
-            <div class="col-md-12">
-                <h3>{{inFors.inforSix[3].title3}}</h3>
-            </div>
-            <div class="col-md-12">
-                <i class="fa-brands fa-square-instagram fa-2x" style="color: rgb(230, 0, 126);"></i>
-                <p style="display: inline-block;">{{inFors.inforSix[3].para3}}</p>
-            </div>
-        </div>
-        <!-- Twitter -->
-        <div class="col-md-3">
-            <hr>
-            <div class="col-md-12">
-                <h3>{{inFors.inforSix[4].title4}}</h3>
-            </div>
-            <div class="col-md-12">
-                <i class="fa-brands fa-square-twitter fa-2x" style="color: rgb(29, 161, 242);"></i>
-                <p style="display: inline-block;">{{inFors.inforSix[4].para4}}</p>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- </div> -->
-<!-- Jquery -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-<!-- Script -->
-<script src="./js/FAQ.js"></script>
-<script src="./js/lightbox-plus-jquery.min.js"></script>

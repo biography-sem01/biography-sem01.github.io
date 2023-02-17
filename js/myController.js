@@ -44,8 +44,8 @@ app.controller('pageNobelList', function ($scope, $http, $location) {
         $scope.nobellist = resjson.data.nobellist;
 
     });
-    let searchParams = $location.search();
-    var keywords = searchParams.keywords;
+    // let searchParams = $location.search();
+    // var keywords = searchParams.keywords;
 });
 app.controller('bioDetaile', function ($scope, $http, $routeParams) {
     $http.get("./data/nobellist.json").then(function (resjson) {
@@ -67,7 +67,12 @@ app.controller('newDetaile', function ($scope, $http, $routeParams) {
         var link = $routeParams.newsId;
         $scope.fullnews = $scope.detailnews.find(function (item) { return item.link === link; });
     });
+});
 
+app.controller('pageAboutUs', function ($scope, $http) {
+    $http.get("./data/aboutus.json").then(function (resjson) {
+        $scope.aboutus = resjson.data;
+    });
 });
 
 app.filter('convert', function ($sce) { return $sce.trustAsHtml; });

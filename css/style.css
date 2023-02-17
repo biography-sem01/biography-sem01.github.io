@@ -449,7 +449,6 @@ position: relative;
   z-index: 1;
 }
 .h-line-x{
-  font-size: 20px;
   font-weight: 700;
   width: fit-content;
   padding: 0px 20px 10px 0px;
@@ -616,3 +615,69 @@ width: fit-content;
   to { opacity: 0; }
 }
 
+#funOfSite {
+  display: grid;
+  width: 50px;
+  height: 50px;
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  background: var(--bs-primary);
+  color: var(--bs-body-bg);
+  place-content: center;
+  border-radius: 50%;
+  z-index: 999;
+}
+
+.bgtitle{ 
+  width: 100%;
+  height: 350px;
+  background: url("/images/bg-about.jpg") no-repeat;
+  background-size: cover;
+  background-position: center;
+  display: grid;
+  place-items: center;
+}
+.bgtitle h1 {
+  padding: 20px;
+  background-color: #c4c4c46e;
+  color: #fff;
+  font-weight: 700;
+}
+.count-content{
+  display: flex;
+  gap: 10px;
+  justify-content: space-around;
+}
+.box-count{
+  color: var(--bs-body-bg);
+  background: var(--bs-primary);
+  font-size: 18px;
+  padding: 30px;
+  border-radius: 5px;
+}
+.box-count i{
+  font-size: 75px;
+}
+.box-count span{
+  font-size: 30px;
+  font-weight: 600;
+}
+.bgcontent{ 
+  width: 100%;
+  height: 400px;
+  background: url("/images/bg-content.jpg") no-repeat;
+  background-size: cover;
+  background-position: right top;
+}
+.title-content{
+  width: 50%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+.title-content h2{
+  font-size: 35px;
+  font-weight: 700;
+  text-align: center;
+}
