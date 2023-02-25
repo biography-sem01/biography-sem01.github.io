@@ -1,0 +1,306 @@
+
+/* Big Image */
+.imageFirst {
+    background-image: url(https://www.nobelprize.org/images/52981-hero-tablet-2x.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 480px;
+    vertical-align: baseline;
+}
+
+/* SubText */
+.subText {
+    text-align: center;
+}
+
+.subText span {
+    color: grey !important;
+}
+
+.subText p {
+    font-size: 15px;
+}
+/* Header 01 */
+.header-1 {
+    text-align: center;
+}
+
+.header-1 p {
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 64px;
+    line-height: 1;
+}
+
+.infor-1-1, .infor-1-2 {
+    background-color: var(--bs-boxcontent);
+}
+
+.infor-1-1 .infor-1-1-first {
+    font-size: 24px;
+    margin-bottom: 40px;
+}
+
+.infor-1-1 .infor-1-1-second {
+    font-size: 18px;
+    margin-bottom: 32px;
+}
+
+.infor-1-1 .infor-1-1-third {
+    font-size: 18px;
+    margin-bottom: 32px;
+}
+
+.infor-1-1 .infor-1-1-fourth {
+    font-size: 18px;
+}
+
+.infor-1-1 a {
+    text-decoration: none;
+    cursor: pointer;
+    transition: all .2s;
+}
+
+.infor-1-1 a:hover {
+    text-decoration: none;
+    
+}
+
+/* Information 01 - Right */
+.container-infor-1 {
+    margin-bottom: 48px;
+}
+
+.infor-1-2 .infor-1-2-first {
+    font-size: 24px;
+    margin-bottom: 28px;
+}
+
+
+ul {
+    margin-left: 24px;
+}
+
+li {
+    font-size: 18px;
+    margin-bottom: 16px;
+}
+
+ul li::marker {
+    font-size: 3rem;
+}
+
+/* Information 02 */
+.infor-2 {
+    margin-bottom: 24px;
+}
+/* Information 02 - Left */
+.image-2 {
+    width: 100%;
+}
+
+.image-2:hover {
+    box-shadow: 0 0 20px #000;
+    cursor: pointer;
+}
+
+/* Information 02 - Right */
+.infor-2-2 {
+    padding: 0 10px 10px 10px;
+}
+
+.infor-2-2-title {
+    font-size: 32px;
+    text-transform: uppercase;
+    color: #CEA152;
+    font-weight: 600;
+}
+
+/* Information 02 - Question - Toggle - Bootstrap */
+#accordionBootstrap .btn {
+    font-size: 24px;
+}
+
+#accordionBootstrap button:hover {
+    background-color: #eee;
+}
+
+#accordionBootstrap #panelsStayOpen-collapseOne p,
+#accordionBootstrap #panelsStayOpen-collapseTwo p,
+#accordionBootstrap #panelsStayOpen-collapseThree p,
+#accordionBootstrap #panelsStayOpen-collapseFour p,
+#accordionBootstrap #panelsStayOpen-collapseFive p {
+    font-size: 18px;
+}
+
+
+/* Information 03 */
+.infor-3 {
+    background-color: var(--bs-boxcontent);
+    margin-top: 32px;
+}
+
+.infor-3 .infor-3-1 #header3 {
+    font-size: 48px;
+    font-weight: 400;
+    line-height: 54px;
+    text-align: left;
+    text-decoration-line: none;
+    cursor: pointer;
+    text-transform: none;
+    vertical-align: baseline;
+}
+
+.infor-3 .infor-3-1 #header3:hover {
+    color: #CEA152;
+}
+
+.infor-3 .infor-3-1 .infor-3-1-para {
+    margin-top: 24px;
+    margin-bottom: 24px;
+}
+
+.infor-3 .infor-3-1 p {
+    font-size: 18px;
+    display: block;
+    line-height: 20px;
+}
+
+.infor-3 .infor-3-2 img {
+    display: block;
+    height: auto;
+    width: 100%;
+    transition: 0.2s;
+}
+
+.infor-3 .infor-3-2 img:hover {
+    box-shadow: 0 0 10px #000;
+    cursor: pointer;
+}
+
+
+.infor-3 .infor-3-2 p {
+    font-size: 18px;
+}
+
+.infor-3 .infor-3-2 span {
+    color: #8a8a8d !important;
+}
+
+.infor-3 .infor-3-2 {
+    margin-top: 24px;
+}
+
+/* Information 04 */
+.infor-4 .infor-4-1 a {
+    font-size: 16px;
+    color: #CEA152 !important;
+    text-decoration: none;
+}
+
+/* Information 05 */
+.infor-5 .infor-5-2{
+    background-color: var(--bs-boxcontent);
+}
+
+.infor-5 .infor-5-1 h3 {
+    color: #CEA152 !important;
+    text-decoration: none;
+}
+
+.infor-5 .infor-5-2 img {
+    width: 100%;
+    display: block;
+    height: 250px;
+    margin-bottom: 18px;
+}
+
+.infor-5-2 img:hover {
+    transform: scale(1.05);
+    transition: all 0.4s;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.infor-5 .infor-5-2 h3 {
+    /* color: #2E2A25; */
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+.infor-5 .infor-5-2 h3:hover {
+    color: #CEA152 !important;
+    cursor: pointer;
+}
+
+
+.infor-5 .infor-5-2 p {
+    line-height: 20px;
+    font-size: 15px;
+    margin-bottom: 32px;
+}
+
+/* Information 06 */
+.infor-6 .infor-6-1 h3 {
+    color: #CEA152 !important;
+}
+
+.infor-6 p {
+    margin-left: 8px;
+    font-size: 18px;
+}
+
+.infor-6 i {
+    filter: none;
+    transition: all 0.2s ease-in-out;
+    font-size: 32px;
+
+}
+
+.infor-6 i:hover {
+    filter: blur(1px);
+    cursor: pointer;
+}
+
+
+/* Timeline */
+ul.timeline {
+    list-style-type: none;
+    position: relative;
+}
+
+
+ul.timeline:before {
+    content: " ";
+    background: #d4d9df;
+    display: inline-block;
+    position: absolute;
+    left: 29px;
+    width: 2px;
+    height: 100%;
+    z-index: 400;
+}
+
+
+ul.timeline > li {
+    margin: 20px 0;
+    padding-left: 20px;
+}
+
+
+ul.timeline > li:before {
+    content: " ";
+    background: white;
+    display: inline-block;
+    position: absolute;
+    border-radius: 50%;
+    border: 3px solid #CEA152;
+    left: 20px;
+    width: 20px;
+    height: 20px;
+    z-index: 400;
+}
+
+ul.timeline h4,
+ul.timeline p {
+    margin-left: 20px;
+}

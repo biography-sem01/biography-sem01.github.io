@@ -1,0 +1,121 @@
+<div ng-controller="pageContact">
+    <link rel="stylesheet" href="/css/contact.css">
+    <div class="container container-1">
+        <!-- Main 01 -->
+        <div class="hold-all">
+            <div class="col-md-6 contact__infor">
+                <!-- Information 1 -->
+                <div class="contact__info-1">
+                    <!-- Header -->
+                    <h3 class="contact__infor-header">FPT APTECH</h3>
+                    <hr style="width: 60%" />
+                    <!-- Content -->
+                    <div class="contact__infor-1-content">
+                        <!-- Address -->
+                        <p>
+                            <i class="fa-sharp fa-solid fa-location-dot"></i>
+                            <span style="font-weight: 600">Address: </span>
+                            <span style="color: #a6a39e; font-weight: 600">
+                                {{inFors.address}}
+                            </span>
+                        </p>
+                        <hr style="width: 90%" />
+                        <!-- Email -->
+                        <p>
+                            <i class="fa-solid fa-envelope"></i><span style="font-weight: 600">Email: </span>
+                            <span style="color: #a6a39e; font-weight: 600">
+                                {{inFors.email}}</span>
+                        </p>
+                        <hr style="width: 90%" />
+                        <!-- Hotline -->
+                        <p>
+                            <i class="fa-solid fa-phone"></i><span style="font-weight: 600">Hotline:</span>
+                            <span style="color: #a6a39e; font-weight: 600">{{inFors.hotline}}</span>
+                        </p>
+                        <hr style="width: 90%" />
+                        <!-- Website -->
+                        <p>
+                            <i class="fa-solid fa-link"></i><span style="font-weight: 600">Website:</span>
+                            <span style="color: #a6a39e; font-weight: 600">{{inFors.website}}</span>
+                        </p>
+                        <hr style="width: 90%" />
+                    </div>
+                </div>
+                <!-- Information 2 -->
+                <div class="contact__info-2">
+                    <!-- Header -->
+                    <h3 class="contact__infor-header">CUSTOMER SERVICE</h3>
+                    <hr style="width: 60%" />
+                    <!-- Content -->
+                    <div class="contact__infor-2-content">
+                        <p>
+                            <i class="fa-solid fa-phone"></i><span style="font-weight: 600">Phone:</span>
+                            <span style="color: #a6a39e; font-weight: 600">{{inFors.telephone}}</span>
+                        </p>
+                        <hr style="width: 90%" />
+                        <p><span style="font-weight: 600">Working Time:</span></p>
+                        <p>
+                            <span style="color: #a6a39e; font-weight: 600">{{inFors.workingTime}}</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <!-- Main 2 -->
+            <div class="col-md-6 contact__form">
+                <div class="contact__form-content">
+                    <p id="contact__form-header">Hello, Let's get in touch.</p>
+                    <form name="userForm" ng-submit="submitForm(userForm.$valid)" novalidate>
+                        <!-- Full Name -->
+                        <div class="contact__form-content-1">
+                            <label for="name" class="contact__form-label"><i class="fa-solid fa-user"></i>Your Name
+                            </label>
+                            <input type="text" name="name" id="name" ng-model="name" required />
+                            <p style="font-size: 12px; color: red" ng-show="userForm.name.$invalid && !userForm.name.$pristine">
+                                Your name is required
+                            </p>
+                        </div>
+                        <!-- Email -->
+                        <div class="contact__form-content-1">
+                            <label for="email" class="contact__form-label"><i class="fa-solid fa-envelope"></i>Email Address</label>
+                            <input type="email" name="email" id="email" ng-model="email" />
+                            <p style="font-size: 12px; color: red" ng-show="userForm.email.$invalid && !userForm.email.$pristine">
+                                Please enter a valid email
+                            </p>
+                        </div>
+                        <!-- Subject -->
+                        <div class="contact__form-content-1">
+                            <label for="subject" class="contact__form-label">
+                                <i class="fa-solid fa-book"></i>Subject
+                            </label>
+                            <input type="text" name="subject" id="subject" ng-model="subject" required />
+                            <p style="font-size: 12px; color: red" ng-show="userForm.subject.$invalid && !userForm.subject.$pristine">
+                                Subject can not be empty
+                            </p>
+                        </div>
+                        <!-- Message -->
+                        <div class="contact__form-content-1">
+                            <label for="message" class="contact__form-label"><i class="fa-solid fa-message"></i>Your Message</label>
+                            <textarea name="message" id="textArea" rows="5" ng-model="message" required></textarea>
+                            <p style="font-size: 12px; color: red" ng-show="userForm.message.$invalid && !userForm.message.$pristine">
+                                Message can not be empty
+                            </p>
+                        </div>
+                        <!-- Button -->
+                        <button id="btn" type="submit" ng-disable="userForm.$invalid"
+                            ng-class="{ 'disabled': userForm.$invalid, 'enabled': !userForm.$invalid }">
+                            SEND MESSAGE <i class="fa-regular fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Map -->
+    <div class="container container-2 container-margin">
+        <div class="row">
+            <iframe id="ContactUs-Map"
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1959.6594136753154!2d106.66680910800831!3d10.786874898078608!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x31752ed2392c44df%3A0xd2ecb62e0d050fe9!2sFPT-Aptech%20Computer%20Education%20HCM!5e0!3m2!1svi!2s!4v1574091971695!5m2!1svi!2s "
+                frameborder="0" style="border: 0" allowfullscreen="" width="100%" height="400px">
+            </iframe>
+        </div>
+    </div>

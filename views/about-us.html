@@ -1,0 +1,313 @@
+<div ng-controller="pageAboutUs">
+    <link rel="stylesheet" href="/css/aboutus.css">
+    <!-- Link Font Awesome - Icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css">
+
+    <!-- <div class="container-fluid"> -->
+    <!-- Image -->
+    <!-- Image -->
+    <div class="container">
+        <div class="row imageFirst">
+            <div class="col-md-12 ">
+            </div>
+        </div>
+    </div>
+    <!-- Sub Text -->
+    <div class="container">
+        <div class="row subText">
+            <div class="col-md-12">
+                <p>A painting by Swedish artist Emil Österman depicting the founder of the Nobel Prize, Alfred Nobel. <span>&copy; Nobel Media. Photo:
+                        Alexander Mahmoud</span></p>
+            </div>
+        </div>
+    </div>
+    <!-- Header 1 -->
+    <div class="container">
+        <div class="row header-1">
+            <div class="col-md-12">
+                <p>THE MAN BEHIND THE PRIZE –</p>
+                <p>ALFRED NOBEL</p>
+            </div>
+        </div>
+    </div>
+    <!-- Information 01 -->
+    <div class="container container-infor-1">
+        <div class="row infor-1">
+            <!-- Information - Left -->
+            <div class="col-md-8 infor-1-1">
+                <hr>
+                <p class="infor-1-1-first">{{inFors.inforOne_One[0].paraFirst}}</p>
+                <p class="infor-1-1-second">{{inFors.inforOne_One[1].paraSecond}}</p>
+                <p class="infor-1-1-third">{{inFors.inforOne_One[2].paraThird}}</p>
+                <a class="infor-1-1-fourth" href="#">{{inFors.inforOne_One[3].paraFourth}}</a>
+            </div>
+            <!-- Information - Right -->
+            <div class="col-md-4 infor-1-2">
+                <hr>
+                <p class="infor-1-2-first">{{inFors.inforOne_Two[0].title}}</p>
+                <ul>
+                    <li>{{inFors.inforOne_Two[1].item1}}</li>
+                    <li>{{inFors.inforOne_Two[2].item2}}</li>
+                    <li>{{inFors.inforOne_Two[3].item3}}</li>
+                    <li>{{inFors.inforOne_Two[4].item4}}</li>
+                    <li>{{inFors.inforOne_Two[5].item5}}</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- Information 02 -->
+    <div class="container">
+        <div class="row infor-2">
+            <div class="col-md-6 infor-2-1">
+                <img src="images/pic2.jpg" alt="Pictures" class="img-responsive image-2">
+            </div>
+            <div class="col-md-6">
+                <h4 class="infor-2-2-title">{{inFors.toggleEvent[0].title}}</h4>
+                <!-- Start of Bootstrap Accordion -->
+                <div class="accordion accordion-flush" id="accordionBootstrap">
+                    <!-- Question 01 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+                            <button class="accordion-button btn" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne"
+                                aria-expanded="true" aria-controls="panelsStayOpen-collapseOne">
+                                {{inFors.toggleEvent[1].question1}}
+                            </button>
+                        </h2>
+                        <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show" aria-labelledby="panelsStayOpen-headingOne">
+                            <div class="accordion-body">
+                                <p class="infor-2-2-answer">
+                                    {{inFors.toggleEvent[1].answer1}}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Question 02 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+                            <button class="accordion-button collapsed  btn" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo">
+                                {{inFors.toggleEvent[2].question2}}
+                            </button>
+                        </h2>
+                        <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingTwo">
+                            <div class="accordion-body">
+                                <p class="infor-2-2-answer">
+                                    {{inFors.toggleEvent[2].answer2}}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Question 03 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+                            <button class="accordion-button collapsed  btn" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree">
+                                {{inFors.toggleEvent[3].question3}}
+                            </button>
+                        </h2>
+                        <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingThree">
+                            <div class="accordion-body">
+                                <p class="infor-2-2-answer">
+                                    {{inFors.toggleEvent[3].answer3}}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Question 04 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="panelsStayOpen-headingFour">
+                            <button class="accordion-button collapsed  btn" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="false" aria-controls="panelsStayOpen-collapseFour">
+                                {{inFors.toggleEvent[4].question4}}
+                            </button>
+                        </h2>
+                        <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingFour">
+                            <div class="accordion-body">
+                                <p class="infor-2-2-answer">
+                                    {{inFors.toggleEvent[4].answer4}}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Question 05 -->
+                    <div class="accordion-item">
+                        <h2 class="accordion-header" id="panelsStayOpen-headingFive">
+                            <button class="accordion-button collapsed  btn" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#panelsStayOpen-collapseFive" aria-expanded="false" aria-controls="panelsStayOpen-collapseFive">
+                                {{inFors.toggleEvent[5].question5}}
+                            </button>
+                        </h2>
+                        <div id="panelsStayOpen-collapseFive" class="accordion-collapse collapse" aria-labelledby="panelsStayOpen-headingFive">
+                            <div class="accordion-body">
+                                <p class="infor-2-2-answer">
+                                    {{inFors.toggleEvent[5].answer5}}
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- End of Bootstrap Accordion -->
+            </div>
+        </div>
+    </div>
+    <!-- Information 03 -->
+    <div class="container">
+        <div class="row infor-3">
+            <div class="col-md-6 infor-3-1">
+                <hr>
+                <p id="header3">{{inFors.inforThree[0].title}}</p>
+                <p class="infor-3-1-para"> {{inFors.inforThree[0].paraOne}}
+                </p>
+                <p>{{inFors.inforThree[0].paraTwo}}</p>
+            </div>
+            <div class="col-md-6 infor-3-2">
+                <hr style="display: none;">
+                <img src="images/pic3.jpg" alt="The will" class="infor-3-2-image" width="496" height="328">
+                <p>The will of Alfred Nobel <span>&copy; Nobel Media AB 2018. <br> Photo: Alexander Mahmoud</span></p>
+            </div>
+        </div>
+    </div>
+    <!-- Information 04 -->
+    <div class="container">
+        <div class="row infor-4">
+            <div class="col-md-12 infor-4-1">
+                <hr>
+                <h3 style="color: #CEA152; font-weight: 600; font-size: 24px;">{{inFors.inforFourth.title}}</h3>
+                <hr>
+            </div>
+        </div>
+    </div>
+    <!-- Information 04 -->
+    <div class="container mt-5 mb-5">
+        <div class="row">
+            <div class="col-md-6 offset-md-3">
+                <ul class="timeline">
+                    <!-- Timeline 1 -->
+                    <li>
+                        <h4 style="color: #CEA152; font-size: 20px;">{{inFors.timeline[0].year1}}</h4>
+                        <p>
+                            {{inFors.timeline[0].para1}}
+                        </p>
+                    </li>
+                    <!-- Timeline 2 -->
+                    <li>
+                        <h4 style="color: #CEA152; font-size: 20px;">{{inFors.timeline[1].year2}}</h4>
+                        <p>
+                            {{inFors.timeline[1].para2}}
+                        </p>
+                    </li>
+                    <!-- Timeline 3 -->
+                    <li>
+                        <h4 style="color: #CEA152; font-size: 20px;">{{inFors.timeline[2].year3}}</h4>
+                        <p>
+                            {{inFors.timeline[2].para3}}
+                        </p>
+                    </li>
+                    <!-- Timeline 4 -->
+                    <li>
+                        <h4 style="color: #CEA152; font-size: 20px;">{{inFors.timeline[3].year4}}</h4>
+                        <p>
+                            {{inFors.timeline[3].para4}}
+                        </p>
+                    </li>
+                    <!-- Timeline 5 -->
+                    <li>
+                        <h4 style="color: #CEA152; font-size: 20px;">{{inFors.timeline[4].year5}}</h4>
+                        <p>
+                            {{inFors.timeline[4].para5}}
+                        </p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- Information 05 -->
+    <div class="container">
+        <div class="row infor-5">
+            <div class="col-md-12 infor-5-1">
+                <hr>
+                <h3 style="font-size: 24px;">{{inFors.inforFifth[0].title}}</h3>
+            </div>
+            <!-- Image 01 -->
+            <div class="col-md-4 infor-5-2">
+                <hr>
+                <h3>{{inFors.inforFifth[1].title1}}</h3>
+                <p>{{inFors.inforFifth[1].para1}}
+                </p>
+                <img src="images/pic4.png" alt="#">
+                <p>Alfred Nobel's dynamite, 1856. <span style="color: #8a8a8d;">Photo: Public domain.</span></p>
+            </div>
+            <!-- Image 02 -->
+            <div class="col-md-4 infor-5-2">
+                <hr>
+                <h3>{{inFors.inforFifth[2].title2}}</h3>
+                <p>{{inFors.inforFifth[2].para2}}
+                </p>
+                <img src="images/pic9.jpg" alt="">
+                <p>A young Alfred Nobel, 1853. <span style="color: #8a8a8d;">Photo: Provided by Nobel Foundation.</span></p>
+            </div>
+            <!-- Image 03 -->
+            <div class="col-md-4 infor-5-2">
+                <hr>
+                <h3>{{inFors.inforFifth[3].title3}}</h3>
+                <p>{{inFors.inforFifth[3].para3}}
+                </p>
+                <img src="images/pic6.jpg" alt="">
+                <p>A German patent Alfred Nobel acquired. <span style="color: #8a8a8d;">Photo: Public domain.</span></p>
+            </div>
+        </div>
+    </div>
+    <!-- Information 06 -->
+    <div class="container">
+        <div class="row infor-6">
+            <div class="col-md-12 infor-6-1">
+                <hr>
+                <h3 style="font-size: 24px;">{{inFors.inforSix[0].title}}</h3>
+            </div>
+            <!-- Facebook -->
+            <div class="col-md-3">
+                <hr>
+                <div class="col-md-12">
+                    <h3>{{inFors.inforSix[1].title1}}</h3>
+                </div>
+                <div class="col-md-12">
+                    <i class="fa-brands fa-square-facebook fa-2x" style="color: rgb(62, 82, 147);"></i>
+                    <p style="display: inline-block;">{{inFors.inforSix[1].para1}}</p>
+                </div>
+            </div>
+            <!-- Youtube -->
+            <div class="col-md-3">
+                <hr>
+                <div class="col-md-12">
+                    <h3>{{inFors.inforSix[2].title2}}</h3>
+                </div>
+                <div class="col-md-12">
+                    <i class="fa-brands fa-square-youtube fa-2x" style="color: rgb(237, 49, 36);"></i>
+                    <p style="display: inline-block;">{{inFors.inforSix[2].para2}}</p>
+                </div>
+            </div>
+            <!-- Instagram -->
+            <div class="col-md-3">
+                <hr>
+                <div class="col-md-12">
+                    <h3>{{inFors.inforSix[3].title3}}</h3>
+                </div>
+                <div class="col-md-12">
+                    <i class="fa-brands fa-square-instagram fa-2x" style="color: rgb(230, 0, 126);"></i>
+                    <p style="display: inline-block;">{{inFors.inforSix[3].para3}}</p>
+                </div>
+            </div>
+            <!-- Twitter -->
+            <div class="col-md-3">
+                <hr>
+                <div class="col-md-12">
+                    <h3>{{inFors.inforSix[4].title4}}</h3>
+                </div>
+                <div class="col-md-12">
+                    <i class="fa-brands fa-square-twitter fa-2x" style="color: rgb(29, 161, 242);"></i>
+                    <p style="display: inline-block;">{{inFors.inforSix[4].para4}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

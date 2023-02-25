@@ -1,0 +1,90 @@
+<div class="container" ng-controller="pageUser">
+    <link rel="stylesheet" href="/css/user.css">
+    <div class="row">
+        <div class="col-12 col-md-8 mx-md-auto mt-5">
+            <div class="colum">
+                <form class="px-2 px-sm-5 py-5" class="right">
+                    <div class="top">
+                        <ul class="nav head-pills mb-3" id="pills-tab" role="tablist">
+                            <li class="head-item text-center">
+                                <a class="head-link active btl" id="pills-home-tab" ng-click="clickLogin()">Login</a>
+                            </li>
+                            <li class="head-item text-center">
+                                <a class="head-link btr" id="pills-profile-tab" ng-click="clickReg()">Signup</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="d-flex justify-content-center align-items-center mt-5">
+                        <div class="card">
+                            <div class="tab-content" id="pills-tabContent">
+                                <div class="tab-pane fade show active" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
+                                    <header class="headerLog">Login</header>
+                                    <div class="form px-4 pt-5">
+                                        <div class="form-group">
+
+                                            <label for="username">Username</label>
+                                            <input type="text" class="form-control" id="username" placeholder="Enter your username"
+                                                ng-model="username" />
+                                            <small id="usernameHelp" class="form-text">Username must be between 5 - 12
+                                                characters.</small>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="password">Password</label>
+                                            <input type="password" class="form-control" id="password" placeholder="Enter your password"
+                                                ng-model="password" />
+                                            <small id="passwordHelp" class="form-text">Password must be alphanumeric, 8
+                                                - 20 characters
+                                                (@, _ and
+                                                - are allowed).</small>
+                                        </div>
+                                        <button class="btn d-block mx-auto" ng-click="submit1()">
+                                            Submit
+                                        </button>
+                                    </div>
+                                </div>
+                                <!-- MyCtrl2 -->
+                                <div class="tab-pane fade" id="pills-profile" role="tabpanel" aria-labelledby="pills-profile-tab">
+                                    <header class="headerReg">Register</header>
+                                    <div class="form px-4">
+                                        <div class="form-group">
+                                            <label for="username1">Username</label>
+                                            <input type="text" class="form-control" id="username1" placeholder="Enter your username"
+                                                ng-model="username1" />
+                                            <small id="usernameHelp1" class="form-text">Username must be between 5 - 12
+                                                characters.</small>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="password1">Password</label>
+                                            <input type="password" class="form-control" id="password1" placeholder="Enter your password"
+                                                ng-model="password1" />
+                                            <small id="passwordHelp1" class="form-text">Password must be alphanumeric, 8
+                                                - 20 characters
+                                                (@, _ and
+                                                - are allowed).</small>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="confirmpassword">Confirm Password</label>
+                                            <input type="password" class="form-control" id="confirmpassword" placeholder="Re-Enter Password"
+                                                ng-model="confirmpassword" />
+                                            <small id="confirmpasswordHelp" class="form-text">Password must be
+                                                same</small>
+                                        </div>
+                                        <div class="form-group">
+                                            <label for="email">Email</label>
+                                            <input type="email" class="form-control" id="email" placeholder="@." ng-model="email" />
+                                            <small id="emailHelp" class="form-text">Email must have @.</small>
+                                        </div>
+                                        <button class="btn d-block mx-auto" ng-click="submit2()">
+                                            Submit
+                                        </button>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>

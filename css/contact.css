@@ -1,0 +1,118 @@
+
+/* Create a space between 2 containers (main) */
+
+/* Hold-all */
+.hold-all {
+  margin: 48px;
+  display: flex;
+}
+/* Icon */
+i {
+  margin-right: 4px;
+}
+
+/* Main - Information 01 */
+.contact__infor-header {
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 36px;
+  margin-bottom: 12px;
+}
+
+.contact__info-1 {
+  margin-bottom: 32px;
+}
+
+.contact__infor-1-content p {
+  margin-top: 24px;
+}
+
+/* Main - Information 02 */
+.contact__infor-2-content p {
+  margin-top: 24px;
+}
+
+/* Form */
+.contact__form {
+  margin-bottom: 48px;
+}
+
+.contact__form .contact__form-content {
+  padding: 12px;
+  padding-bottom: 24px;
+}
+/* Form - Header */
+.contact__form-content #contact__form-header {
+  font-size: 36px;
+  font-weight: 400;
+  line-height: 36px;
+  margin-bottom: 36px;
+}
+
+.contact__form p {
+  font-weight: 400;
+}
+
+/* Form - Components*/
+.contact__form-content-1 {
+  margin-bottom: 20px;
+}
+/* Form - Label of components */
+.contact__form-label {
+  font-weight: 500;
+  font-size: 14px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  display: block;
+}
+
+/* Form - Input */
+input,
+textarea {
+  padding: 10px;
+  width: 100%;
+  display: block;
+  font-size: 16px;
+}
+
+/* Button */
+button {
+  color: #fff;
+  background-color: #007bff;
+  border-color: #007bff;
+  border-radius: 4px;
+  font-size: 16px;
+  padding: 8px 16px;
+  width: 30%;
+  transition: all 0.2s ease-in-out;
+  line-height: 12px;
+  letter-spacing: 2px;
+}
+
+button.disabled {
+  background-color: #ccc;
+  border-color: #ccc;
+  color: #999;
+  cursor: not-allowed;
+}
+
+button.enabled {
+  background-color: #28a745;
+  border-color: #28a745;
+}
+
+button:hover {
+  background-color: #0069d9;
+  border-color: #0062cc;
+}
+
+button.enabled:hover {
+  background-color: #218838;
+  border-color: #1e7e34;
+}
+
+button:active,
+button:focus {
+  outline: none;
+  box-shadow: none;
+}

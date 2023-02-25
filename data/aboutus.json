@@ -1,0 +1,170 @@
+{
+    "inforOne_One" : 
+    [
+        {
+            "paraFirst" : "For the greatest benefit to humankind"
+        },
+
+        {
+            "paraSecond" : "Alfred Nobel was an inventor, entrepreneur, scientist and businessman who also wrote poetry and drama. His varied interests are reflected in the prize he established and which he lay the foundation for in 1895 when he wrote his last will, leaving much of his wealth to the establishment of the prize."
+        },
+
+        {
+            "paraThird" : "Since 1901, the Nobel Prize has been honoring men and women from around the world for outstanding achievements in physics, chemistry, physiology or medicine, literature and for work in peace."
+        },
+
+        {
+            "paraFourth" : "Find out more about Alfred’s life"
+        }
+    ],
+
+    "inforOne_Two" : 
+    [
+        {
+            "title" : "Quick facts"
+        },
+
+        {
+            "item1" : "Born: 21 October 1833"
+        },
+
+        {
+            "item2" : "Died: 10 December 1896"
+        },
+
+        {
+            "item3" : "Known for: inventing dynamite and holder of 355 patents"
+        },
+
+        {
+            "item4" : "Professions: chemist, inventor, engineer, entrepreneur, businessman, author"
+        },
+
+        {
+            "item5" : "Will: left 31 million SEK (about 265 million dollar today) to fund the prizes"
+        }
+    ],
+
+    "toggleEvent" : 
+    [
+        {
+            "title" : "Top Questions"
+        },
+
+        {
+            "question1" : "When was Alfred Nobel born?",
+            "answer1" : "Swedish chemist, engineer, and industrialist Alfred Nobel was born October 21, 1833 in Stockholm, Sweden."
+        },
+
+        {
+            "question2" : "How was Alfred Nobel educated?",
+            "answer2" : "Alfred Nobel initially learned the fundamentals of engineering from his father. He later learned from private tutors, becoming competent in chemistry. After working under the direction of Swedish American naval engineer and inventor John Ericsson in the United States, Nobel returned to Europe to work in his father's factory in St. Petersburg."
+        },
+
+        {
+            "question3" : "How did Alfred Nobel die?",
+            "answer3" : "By 1895 Nobel had develop angina pectoris. He died of a cerebral hemorrhage at his villa in San Remo, Italy, on December 10, 1896."
+        },
+
+        {
+            "question4" : "How did Alfred Nobel found the Nobel Prizes?",
+            "answer4" : "Alfred Nobel was known to be generous in humanitarian and scientific philanthropies. In his will, he left the bulk of his fortune in trust to establish what came to be the mose highly regarded of international awards, the Nobel Prizes."
+        },
+
+        {
+            "question5" : "What is Alfred Nobel famous for?",
+            "answer5" : "Alfred Nobel is best known for his invention of dynamite and an explosive device called a blasting cap, which inaugurated the modern use of high explosives. He also founded the Nobel Prizes."
+        }
+    ],
+
+    "inforThree" : 
+    [
+        {
+            "title" :"The last will and testament",
+            "paraOne" : "Alfred Nobel signed his last will in Paris on November 27, 1895. He specified that the bulk of his fortune should be divided into five parts and to be used for prizes in physics, chemistry, physiology or medicine, literature and peace to “those who, during the preceding year, shall have conferred the greatest benefit to humankind.”",
+            "paraTwo" : "Read more about the will."
+        }
+    ],
+
+    "inforFourth" : 
+    {
+        "title" : "Key Events in Alfred Nobel's life"
+    },
+
+    "timeline" : 
+    [
+        {
+            "year1" : "1833",
+            "para1" : "Alfred Nobel is born in Stockholm, Sweden. In the same year, his father, Immanuel Nobel, goes bankrupt. He was the third son of Immanuel Nobel (1801–1872), an inventor and engineer, and Karolina Andriette Nobel (née Ahlsell 1805–1889)."
+        },
+
+        {
+            "year2" : "1850",
+            "para2" : "At the age of 17, Alfred Nobel speaks five languages fluently. He travels to Paris and works for one year in the laboratory of T. Jules Pelouze. He also travels to Italy, Germany and the United States (US)."
+        },
+
+        {
+            "year3" : "1869",
+            "para3" : "Alfred Nobel starts his experiments with nitroglycerin. Alfred Nobel moves back to Stockholm and obtains the first patent on nitroglycerin (blasting oil) as an industrial explosive."
+        },
+
+        {
+            "year4" : "1896",
+            "para4" : "Alfred Nobel dies, at the age of 63, in his home in San Remo, Italy, on 10 December 1896. The third and final will of Alfred Nobel is signed at the Swedish-Norwegian Club in Paris."
+        },
+
+        {
+            "year5" : "1901",
+            "para5" : "The first Nobel Prizes are awarded on 10 December. Each Nobel Prize consists of a gold medal, a diploma bearing a citation, and a sum of money, the amount of which depends on the income of the Nobel Foundation."
+        }
+    ],
+
+    "inforFifth" : 
+    [
+        {
+            "title" :"Alfred Nobel's work"
+        },
+
+        {
+            "title1" : "Inventing dynamite",
+            "para1" : "Based on Alfred’s work and patents a whole new industry developed. Within ten years, 16 explosives producing factories had been founded in 14 countries with Nobel as shareholder or co-owner."
+        },
+
+        {
+            "title2" : "Interest in literature",
+            "para2" : "Alfred Nobel also had a big interest in literature and writing. He left behind a private library at Björkborn with over 1,500 volumes, among those works by many great writers of the 19th century."
+        },
+
+        {
+            "title3" : "A long list of inventions",
+            "para3" : "Alfred invented dynamite and experimented in making synthetic rubber, leather and artificial silk among in literature and writing. many other things. During his lifetime he acquired 355 patents worldwide."
+        }
+    ],
+
+    "inforSix" : 
+    [
+        {
+            "title" :"Connect with us"
+        },
+
+        {
+            "title1" : "Facebook",
+            "para1" : "5,000,000 followers"
+        },
+
+        {
+            "title2" : "Youtube",
+            "para2" : "3,000,000 followers"
+        },
+
+        {
+            "title3" : "Instagram",
+            "para3" : "4,000,000 followers"
+        },
+
+        {
+            "title4" : "Twitter",
+            "para4" : "5,000,000 followers"
+        }
+    ]
+}

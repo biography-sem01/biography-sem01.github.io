@@ -1,0 +1,50 @@
+<section class="gallery min-vh-100" ng-controller="pageGallery">
+    <link rel="stylesheet" href="/css/gallery.css">
+    <div class="container-lg">
+        <!-- Header -->
+        <h1>Gallery</h1>
+        <!-- Filter Button -->
+        <div class="row buttonGroup">
+            <div class="col-md-3">
+                <button type="button" class="btn" ng-click="setFilter('all')">
+                    <span>All (Prizes)</span>
+                </button>
+            </div>
+            <div class="col-md-3">
+                <button type="button" class="btn" ng-click="setFilter('physics')">
+                    <span>Physics</span>
+                </button>
+            </div>
+            <div class="col-md-3">
+                <button type="button" class="btn" ng-click="setFilter('chemistry')">
+                    <span>Chemistry</span>
+                </button>
+            </div>
+            <div class="col-md-3">
+                <button type="button" class="btn" ng-click="setFilter('medicine')">
+                    <span>Medicine</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- End of Filter Button -->
+
+        <!-- Gallery -->
+        <div class="row gy-4 row-cols-1 row-cols-sm-2 row-cols-md-3">
+            <div class="col" ng-repeat="image in filteredImages">
+                <img ng-src="{{ image.src }}" alt="{{ image.alt }}" class="gallery-item" ng-click="showPopup(image)" />
+                <h4 style="text-align: center">{{image.caption}}</h4>
+                <h6 style="text-align: center">{{image.caption2}}</h6>
+            </div>
+            <!-- Popup Images -->
+            <div ng-show="show">
+                <div class="popup">
+                    <img ng-src="{{selectedImage.src}}" alt="{{selectedImage.alt}}" />
+                    <button ng-click="hidePopup()">Close</button>
+                </div>
+            </div>
+            <!-- End of Popup Images -->
+        </div>
+        <!-- End of Gallery -->
+    </div>
+</section>
