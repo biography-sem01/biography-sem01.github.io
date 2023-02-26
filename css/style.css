@@ -395,7 +395,7 @@ ul.navbar-nav .active {
     width: 100%;
     position: absolute;
     content: "";
-    border-top: 1px solid var(--bs-primary);
+    border-top: 2px solid var(--bs-primary);
     top: 50%;
     left: 0;
     z-index: 1,
@@ -413,7 +413,9 @@ ul.navbar-nav .active {
     display: flex;
     justify-content: center;
     flex-wrap: wrap;
-    list-style: none
+    list-style: none;
+    margin: 1rem 0;
+    padding: 0;
 }
 
 .links-footer li {
@@ -746,12 +748,12 @@ ul.toc {
     z-index: 10;
     padding: 20px 10px 0;
     transition: padding .5s ease;
-    background: linear-gradient(0deg,var(--bs-body-bg-hl),transparent)
+    background: linear-gradient(0deg,var(--bs-body-bg-hl) 60%,transparent)
 }
 
 .btn_readmore,.card-news-slider .card-content h5 {
     font-size: 18px;
-    color: var(--bs-body-bg)
+    color: var(--bs-primary);
 }
 
 .card-news-slider img,.post-img img {
@@ -808,7 +810,7 @@ ul.toc {
 
 .randomList {
     width: 100%;
-    height: 450px;
+    height: 60vw;
     overflow: hidden;
     position: relative
 }
@@ -1077,6 +1079,14 @@ ul.toc {
         padding: 0.3rem;
         font-size: 0.9rem;
     }
+    .card-content .card-title{
+        margin-bottom:0.3rem;
+        font-size: 1.1rem;
+    }
+    .card-content p{
+        min-height: 2.5rem;
+        margin-bottom: 0.3rem;
+    }
 }
 @media only screen and (max-width: 767px) and (min-width: 577px) {
     body{
@@ -1187,6 +1197,15 @@ ul.toc {
     }
     .line-x{
         display: none;
+    }
+    .home_snews{
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
+    }
+    .randomPanel {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 1rem;
     }
 }
 /* Medium devices (landscape tablets, 768px and up) */
@@ -1367,7 +1386,7 @@ ul.toc {
         gap: 1rem;
     }
     .hav-add{
-        padding: 0 2rem;
+        padding: 0 1rem;
     }
     .h-line-x{
         font-size: 1rem;
@@ -1380,6 +1399,9 @@ ul.toc {
     width: 100%;
     height: 25rem;
     position: relative
+}
+.randomList {
+    height: 400px;
 }
 }
 
@@ -1410,12 +1432,15 @@ ul.toc {
     height: 25rem;
     position: relative
 }
-.banner-ov-bg h2{
-    font-size: 5rem;
-    text-align: center;
-    font-weight: 900;
-}
+    .banner-ov-bg h2{
+        font-size: 5rem;
+        text-align: center;
+        font-weight: 900;
+    }
     .card-featured-col2 .card-content{
         padding: 1rem;
+    }
+    .randomList {
+        height: 450px;
     }
 }
