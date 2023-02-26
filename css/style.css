@@ -274,6 +274,9 @@ ul.navbar-nav .active {
     height: 100%;
 }
 
+.card-featured{
+    position: relative;
+}
 .card-featured .card-thumb .card-datetime {
     position: absolute;
     padding: 10px 20px;
@@ -951,14 +954,17 @@ ul.toc {
 .navbar-nav .btnClosebox {display: none;}
 
 /* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (max-width: 767px) and (min-width: 577px) {
+@media only screen and (max-width: 576px) {
     body{
-        font-size: 12px;
+        font-size: 15px;
     }
     
     .container{
         max-width: 100% !important;
-        padding: 0 2rem;
+        padding: 0 1rem;
+    }
+    #section-two iframe{
+        height: 250px;
     }
     .offcanvas-body {
         position: fixed;
@@ -984,7 +990,7 @@ ul.toc {
     .btn_offcanvas{
         height: 40px;
         width: 40px;
-        font-size: 20px;
+        font-size: 1.5rem;
         display: grid;
         place-content: center;
     }
@@ -999,12 +1005,20 @@ ul.toc {
         font-size: 20px;
     }
     li.nav-item {
-        font-size: 1.2rem;
+        font-size: 1rem;
     }
     .boxcta h2{
-        font-size: 1.5rem;
+        font-size: 1rem;
+        text-align: center;
+        width: 80%;
+        padding: 5px;
     }
-    
+    .btn-cta{
+        font-size: 0.5rem;
+    }
+    .row .col{
+        flex:100%
+    }
     .home_snews{
         grid-template-columns: 1fr 1fr;
         gap: 1rem;
@@ -1031,6 +1045,37 @@ ul.toc {
     }
     .hav-add{
         padding: none;
+    }
+    .video-banner{
+        height: 20rem;
+    }
+    .banner-ov-bg h2{
+        font-size: 1.5rem;
+        text-align: center;
+        font-weight: 900;
+    }
+    .bi-social-icon li{
+        font-size: 2rem;
+        padding: 1rem;
+    }
+    .line-x{
+        display: none;
+    }
+    .bg-herotitle .title-center{
+        padding: 2rem;
+    }
+    .card-featured-col2{
+        margin: 1rem 0;
+    }
+    #section-five .col {
+        margin: 1rem 0;
+    }
+    .card-featured-col2 .card-content{
+        padding: 0.5rem;
+    }
+    .card-featured-col2 .card-thumb .card-datetime{
+        padding: 0.3rem;
+        font-size: 0.9rem;
     }
 }
 @media only screen and (max-width: 767px) and (min-width: 577px) {
@@ -1104,6 +1149,7 @@ ul.toc {
     
     .btn-rm{
         margin:0;
+        padding: 5px 0;
     }
     
     .card-featured .card-thumb {
@@ -1111,11 +1157,37 @@ ul.toc {
         height: 17rem;
         position: relative
     }
-    .card-featured .card-content .card-title{
+    .card-content .card-title{
         font-size: 1rem;
     }
-    
-
+    .video-banner{
+        height: 20rem;
+    }
+    .banner-ov-bg h2{
+        font-size: 2rem;
+        text-align: center;
+        font-weight: 900;
+    }
+    .card-featured-col2 .card-content{
+        padding: 0.5rem;
+    }
+    .card-featured-col2 .card-thumb .card-datetime{
+        padding: 0.3rem;
+        font-size: 0.7rem;
+    }
+    .card-featured .card-content .card-title{
+        font-size: 1rem;
+        max-height: 3.5rem;
+    }
+    .card-featured .card-content{
+       padding: 1rem; 
+    }
+    .bi-social-icon li{
+        font-size: 1.5rem;
+    }
+    .line-x{
+        display: none;
+    }
 }
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (max-width: 991px) and (min-width: 768px) {
@@ -1229,6 +1301,17 @@ ul.toc {
     .btn-cta{
         font-size: 1rem;
     }
+    .video-banner{
+        height: 25rem;
+    }
+    .banner-ov-bg h2{
+        font-size: 2rem;
+        text-align: center;
+        font-weight: 900;
+    }
+    .card-featured-col2 .card-content{
+        padding: 0.5rem;
+    }
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
@@ -1265,6 +1348,11 @@ ul.toc {
     .video-banner{
         height: 25rem;
     }
+    .banner-ov-bg h2{
+        font-size: 2rem;
+        text-align: center;
+        font-weight: 900;
+    }
     
     .card-featured .card-content{
         padding: 1.2rem;
@@ -1283,6 +1371,9 @@ ul.toc {
     }
     .h-line-x{
         font-size: 1rem;
+    }
+    .card-featured-col2 .card-content{
+        padding: 0.5rem;
     }
     
 .card-featured .card-thumb {
@@ -1319,4 +1410,12 @@ ul.toc {
     height: 25rem;
     position: relative
 }
+.banner-ov-bg h2{
+    font-size: 5rem;
+    text-align: center;
+    font-weight: 900;
+}
+    .card-featured-col2 .card-content{
+        padding: 1rem;
+    }
 }
