@@ -1,7 +1,7 @@
 {
     "nobellist": [
         {
-            "thumburl": "./images/thumb/penrose-111758-portrait-mini-2x.webp",
+            "thumburl": "./images/thumb/penrose-111758-portrait-mini-2x.jpg",
             "title": "Roger Penrose",
             "category": "Physics",
             "year": "2020",
@@ -949,7 +949,7 @@
             ]
         },
         {
-            "thumburl": "./images/thumb/goodenough-99991-portrait-mini-2x.webp",
+            "thumburl": "./images/thumb/goodenough-99991-portrait-mini-2x.jpg",
             "title": "John B. Goodenough",
             "category": "Chemistry",
             "year": "2019",
@@ -1068,7 +1068,7 @@
             ]
         },
         {
-            "thumburl": "./images/thumb/whittingham-99990-portrait-mini-2x.webp",
+            "thumburl": "./images/thumb/whittingham-99990-portrait-mini-2x.jpg",
             "title": "M. Stanley Whittingham",
             "category": "Chemistry",
             "year": "2019",
@@ -1660,7 +1660,7 @@
             ]
         },
         {
-            "thumburl": "./images/thumb/betzig-15197-portrait-mini-2x.webp",
+            "thumburl": "./images/thumb/betzig-15197-portrait-mini-2x.jpg",
             "title": "Eric Betzig",
             "category": "Chemistry",
             "year": "2014",
@@ -1741,7 +1741,7 @@
             ]
         },
         {
-            "thumburl": "./images/thumb/moerner-15195-portrait-mini-2x.webp",
+            "thumburl": "./images/thumb/moerner-15195-portrait-mini-2x.jpg",
             "title": "William E. Moerner",
             "category": "Chemistry",
             "year": "2014",
@@ -2109,7 +2109,7 @@
             ]
         },
         {
-            "thumburl": "./images/thumb/ratcliffe-99995-portrait-mini-2x.webp",
+            "thumburl": "./images/thumb/ratcliffe-99995-portrait-mini-2x.jpg",
             "title": "Sir Peter J. Ratcliffe",
             "category": "Medicine",
             "year": "2019",
@@ -2208,7 +2208,7 @@
             ]
         },
         {
-            "thumburl": "./images/thumb/kaelin-101333-portrait-mini-2x.webp",
+            "thumburl": "./images/thumb/kaelin-101333-portrait-mini-2x.jpg",
             "title": "William G. Kaelin Jr",
             "category": "Medicine",
             "year": "2019",
@@ -2372,7 +2372,7 @@
             ]
         },
         {
-            "thumburl": "./images/thumb/alter-111765-portrait-mini-2x.webp",
+            "thumburl": "./images/thumb/alter-111765-portrait-mini-2x.jpg",
             "title": "Harvey J. Alter",
             "category": "Medicine",
             "year": "2020",
