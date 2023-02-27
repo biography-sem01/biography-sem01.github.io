@@ -51,6 +51,7 @@ app.run(function ($rootScope, $anchorScroll, $location, $interval) {
         localStorage.setItem('visitorData', JSON.stringify($rootScope.visitorData));
         $rootScope.showDataVisitor = $rootScope.visitorData.find(function (item) {
             return item.path === $location.path();
+            // return item.path === "/";
         });
 
         $rootScope.showOffcanvas = false;

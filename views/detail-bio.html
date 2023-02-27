@@ -1,7 +1,7 @@
 <section ng-controller="bioDetaile">
     <div class="container">
         <div class="row box-content short-info d-flex justify-content-between p-5">
-            <div class="col-md-3">
+            <div class="col-md-4">
                 <img ng-src="{{fullinfo.thumburl}}" alt="{{fullinfo.title}}">
             </div>
             <div class="col-md-8 d-flex flex-column justify-content-between">
@@ -82,8 +82,7 @@
                     <div ng-bind-html="fullinfo.awardshonors | convert"></div>
                     <div ng-if="fullinfo.videoawards">
                         <h3>{{fullinfo.videoawards.title}}</h3>
-                        <iframe width="100%" height="550" ng-src="{{fullinfo.videoawards.id | embed}}"
-                            title="Nobel Minds 2022" frameborder="0"
+                        <iframe width="100%" height="550" ng-src="{{fullinfo.videoawards.id | embed}}" title="Nobel Minds 2022" frameborder="0"
                             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                             allowfullscreen></iframe>
                         <p>{{fullinfo.videoawards.info}}</p>
