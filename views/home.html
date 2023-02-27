@@ -9,7 +9,7 @@
                     <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
                 </div>
                 <div class="carousel-inner">
-                    <div ng-class="{'carousel-item active': $first}" class="carousel-item" ng-repeat="data in sliders">
+                    <div ng-class="{'active': $first}" class="carousel-item" ng-repeat="data in sliders">
                         <img ng-src="{{data.urlimage}}" class="d-block w-100" alt="{{data.alt}}">
                     </div>
                 </div>

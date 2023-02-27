@@ -1,15 +1,15 @@
 {
     "sliders": [
         {
-            "urlimage": "https://www.w3schools.com/howto/img_lights_wide.jpg",
+            "urlimage": "/images/sliders/slider1.jpg",
             "alt": "Slider 1"
         },
         {
-            "urlimage": "https://www.w3schools.com/howto/img_mountains_wide.jpg",
+            "urlimage": "/images/sliders/slider-2.png",
             "alt": "Slider 2"
         },
         {
-            "urlimage": "https://www.w3schools.com/howto/img_fjords_wide.jpg",
+            "urlimage": "/images/sliders/slider-1.png",
             "alt": "Slider 3"
         }
     ],
